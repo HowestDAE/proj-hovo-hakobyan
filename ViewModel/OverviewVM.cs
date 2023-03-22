@@ -12,7 +12,19 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
     public class OverviewVM : ObservableObject
     {
         private SummonerAPIRepository _summonerAPIRepository;
-        public List<Summoner> Summoners { get; set; }
+       
+        private string _loadingText;
+        public string LoadingText
+        {
+            get { return _loadingText; }
+            set
+            {
+                _loadingText = value;
+                OnPropertyChanged(nameof(LoadingText));
+            }
+        }
+
+        public List<TopSummoner> TopSummoners { get; set; }
 
         public SummonerAPIRepository SummonerAPIRepository
         {
@@ -22,13 +34,18 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
         public OverviewVM()
         {
             _summonerAPIRepository = new SummonerAPIRepository();
+
+            //Loading
+            LoadingText = "Loading, please wait...";
             GetTopPlayersAsync();
+           
         }
 
         private async void GetTopPlayersAsync()
         {
-            Summoners = await _summonerAPIRepository.GetTopSummonersAsync(false);
-            OnPropertyChanged(nameof(Summoners));
+            TopSummoners = await _summonerAPIRepository.GetTopSummonersAsync(false);
+            OnPropertyChanged(nameof(TopSummoners));
+            LoadingText = string.Empty;
         }
     }
 }
