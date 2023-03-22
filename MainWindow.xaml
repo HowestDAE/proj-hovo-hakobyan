@@ -4,9 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_2DAE15_HovhannesHakobyan_Exam"
+        xmlns:vm="clr-namespace:_2DAE15_HovhannesHakobyan_Exam.ViewModel"
+        xmlns:view="clr-namespace:_2DAE15_HovhannesHakobyan_Exam.View"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Frame NavigationUIVisibility="Hidden" Content="{Binding CurrentPage}" />
     </Grid>
+
+    <Window.DataContext>
+        <vm:MainVM />
+    </Window.DataContext>
 </Window>
