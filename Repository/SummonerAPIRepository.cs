@@ -17,11 +17,11 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
         private async Task LoadTopSummonersAsync()
         {
 
-
             using (HttpClient client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("X-Riot-Token", _apiKey);
                 string endpoint = "https://euw1.api.riotgames.com/lol/league/v4/challengerleagues/by-queue/RANKED_SOLO_5x5";
+
                 try
                 {
                    var response = await client.GetAsync(endpoint);
@@ -34,7 +34,12 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
                     string json = await response.Content.ReadAsStringAsync();
                     JObject jsonObject = JObject.Parse(json);
                     _topSummoners = JsonConvert.DeserializeObject<List<Summoner>>(jsonObject["entries"].ToString());
+
+                    //Order the summoners based on how much league points the have
                     _topSummoners = _topSummoners.OrderByDescending(s => s.LeaguePoints).ToList();
+
+                    //Fill in the Rank property (cannot be retrieved from the api)
+                    _topSummoners = _topSummoners.Select((summoner,index) => { summoner.Rank = index + 1; return summoner; }).ToList();
                 }
                 catch (Exception ex)
                 {

@@ -8,24 +8,35 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="OverviewPage"
-      Background="Bisque">
+      Background="#31313C">
 
+  
     <Page.DataContext>
         <vm:OverviewVM />
     </Page.DataContext>
-    
-    <Grid>
+
+    <Grid x:Name="MainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition />
-        </Grid.RowDefinitions>  
-        
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="8*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
         <Grid.Resources>
             <!-- Default text style -->
             <Style x:Key="defaultStyle" TargetType="TextBlock">
                 <Setter Property="FontSize" Value="15" />
+                <Setter Property ="Foreground" Value="#7B7A8E"/>
+            </Style>
+
+            <!-- Name style -->
+            <Style x:Key="summonerNameStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property ="Foreground" Value="White"/>
                 <Setter Property="FontWeight" Value="Bold" />
-                <Setter Property ="Foreground" Value="Black"/>
                 <Setter Property="Margin" Value="3,3"/>
             </Style>
 
@@ -33,25 +44,28 @@
             <Style x:Key="titleStyle" TargetType="TextBlock">
                 <Setter Property="FontSize" Value="20" />
                 <Setter Property="FontWeight" Value="ExtraBold" />
-                <Setter Property ="Foreground" Value="Black"/>
+                <Setter Property ="Foreground" Value="#7B7A8E"/>
                 <Setter Property="Margin" Value="3,3"/>
             </Style>
         </Grid.Resources>
         <!--Title bar-->
-        <TextBlock Style="{StaticResource titleStyle}" Text="Summoner"/>
-        <TextBlock Style="{StaticResource titleStyle}" Text="LP" HorizontalAlignment="Right" Margin="0,0,40,0"/>
+        <TextBlock Style="{StaticResource titleStyle}" Text="#"/>
+        <TextBlock Style="{StaticResource titleStyle}" Text="Summoner" Grid.Column="1"/>
+        <TextBlock Style="{StaticResource titleStyle}" Text="LP" Grid.Column="2"/>
         <!--Listbox to list the summoners-->
-        <ListBox ItemsSource="{Binding Summoners}" Background="Transparent" HorizontalContentAlignment="Stretch" Grid.Row="1">
+        <ListBox ItemsSource="{Binding Summoners}" Background="Transparent" HorizontalContentAlignment="Stretch" Grid.Row="1" Grid.ColumnSpan="3">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="8*" />
+                            <ColumnDefinition Width="1*" />
                         </Grid.ColumnDefinitions>
-                        <TextBlock Style="{StaticResource defaultStyle}" Text="{Binding Name }" />
-                        <TextBlock Style="{StaticResource defaultStyle}" Text="{Binding LeaguePoints}" HorizontalAlignment="Right" Grid.Column="1"/>
-                        <Separator Grid.ColumnSpan="2" VerticalAlignment="Bottom" Background="Gray" Margin="10,0,10,0"/>
+                        <TextBlock Style="{StaticResource defaultStyle}" Text="{Binding Rank}"/>
+                        <TextBlock Style="{StaticResource summonerNameStyle}" Text="{Binding Name }" Grid.Column="1" />
+                        <TextBlock Style="{StaticResource defaultStyle}" Text="{Binding LeaguePoints}" Grid.Column="2" Margin="27,0,0,0"/>
+                        <Separator Grid.ColumnSpan="3" VerticalAlignment="Bottom" Background="#282830" />
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>

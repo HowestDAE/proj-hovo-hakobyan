@@ -17,5 +17,8 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Model
 
         [JsonProperty("summonerId")]
         public string Id { get; set; }
+
+        [JsonIgnore]
+        public int Rank { get; set; }
     }
 }
