@@ -14,5 +14,8 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Model
 
         [JsonProperty("leaguePoints")]
         public int LeaguePoints { get; set; }
+
+        [JsonProperty("summonerId")]
+        public string Id { get; set; }
     }
 }

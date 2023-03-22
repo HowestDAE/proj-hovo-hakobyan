@@ -86,6 +86,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Repository\SummonerAPIRepository.cs" />
     <Compile Include="ViewModel\MainVM.cs" />
     <Compile Include="ViewModel\OverviewVM.cs" />
     <Compile Include="View\OverviewPage.xaml.cs">
@@ -137,7 +138,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repository\" />
     <Folder Include="Resources\Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

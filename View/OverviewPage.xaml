@@ -15,22 +15,44 @@
     </Page.DataContext>
     
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>  
+        
         <Grid.Resources>
             <!-- Default text style -->
             <Style x:Key="defaultStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property ="Foreground" Value="Black"/>
+                <Setter Property="Margin" Value="3,3"/>
+            </Style>
+
+            <!-- Title style -->
+            <Style x:Key="titleStyle" TargetType="TextBlock">
                 <Setter Property="FontSize" Value="20" />
                 <Setter Property="FontWeight" Value="ExtraBold" />
                 <Setter Property ="Foreground" Value="Black"/>
+                <Setter Property="Margin" Value="3,3"/>
             </Style>
         </Grid.Resources>
-        
+        <!--Title bar-->
+        <TextBlock Style="{StaticResource titleStyle}" Text="Summoner"/>
+        <TextBlock Style="{StaticResource titleStyle}" Text="LP" HorizontalAlignment="Right" Margin="0,0,40,0"/>
         <!--Listbox to list the summoners-->
-        <ListBox ItemsSource="{Binding Summoners}" Background="Transparent">
+        <ListBox ItemsSource="{Binding Summoners}" Background="Transparent" HorizontalContentAlignment="Stretch" Grid.Row="1">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
                         <TextBlock Style="{StaticResource defaultStyle}" Text="{Binding Name }" />
-                    </StackPanel>
+                        <TextBlock Style="{StaticResource defaultStyle}" Text="{Binding LeaguePoints}" HorizontalAlignment="Right" Grid.Column="1"/>
+                        <Separator Grid.ColumnSpan="2" VerticalAlignment="Bottom" Background="Gray" Margin="10,0,10,0"/>
+                    </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
