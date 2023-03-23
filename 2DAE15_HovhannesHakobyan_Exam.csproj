@@ -89,6 +89,7 @@
     <Compile Include="Repository\SummonerAPIRepository.cs" />
     <Compile Include="ViewModel\MainVM.cs" />
     <Compile Include="ViewModel\OverviewVM.cs" />
+    <Compile Include="View\Converters\UrlToImageConverter.cs" />
     <Compile Include="View\OverviewPage.xaml.cs">
       <DependentUpon>OverviewPage.xaml</DependentUpon>
     </Compile>

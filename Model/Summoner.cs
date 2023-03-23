@@ -17,6 +17,14 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Model
         public SummonerInfo SummonerInfo { get; set; }
         [JsonIgnore]
         public RankInfo RankInfo { get; set; }
+        [JsonIgnore]
+        public string ImageUrl
+        {
+            get
+            {
+                return $"http://ddragon.leagueoflegends.com/cdn/13.6.1/img/profileicon/{SummonerInfo.ProfileIconId}.png";
+            }
+        }
        
     }
 
