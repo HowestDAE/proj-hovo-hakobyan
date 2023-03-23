@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
@@ -38,7 +39,7 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
             //Loading
             LoadingText = "Loading, please wait...";
             GetTopPlayersAsync();
-           
+         
         }
 
         private async void GetTopPlayersAsync()

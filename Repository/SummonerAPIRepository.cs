@@ -10,14 +10,23 @@ using System.Threading.Tasks;
 using static System.Net.WebRequestMethods;
 using System.Reflection;
 using System.Net;
+using System.Xml.Linq;
+using System.Windows.Markup;
+using System.Threading;
+using System.Diagnostics;
 
 namespace _2DAE15_HovhannesHakobyan_Exam.Repository
 {
     public class SummonerAPIRepository
     {
         private List<TopSummoner> _topSummoners;
-        private string _apiKey = "RGAPI-407a2e80-c7fe-474c-8c26-e2826e304006";
+        private string _apiKey = "RGAPI-9c70a68f-66f2-4af6-b29d-fd9d76665d70";
         private int _nrTopPlayers = 15;
+
+        //To avoid having Too Many Request exceptions
+        private int _delayBetweenRequestsMs = 1000;
+        private SemaphoreSlim _semaphore = new SemaphoreSlim(15,15);
+
 
         private async Task LoadTopSummonersAsync()
         {
@@ -27,8 +36,11 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
                 string endpoint = "https://euw1.api.riotgames.com/lol/league/v4/challengerleagues/by-queue/RANKED_SOLO_5x5";
 
                 try
-                {
-                   var response = await client.GetAsync(endpoint);
+                {                   
+                    await _semaphore.WaitAsync();
+                    var response = await client.GetAsync(endpoint);             
+                    await Task.Delay(_delayBetweenRequestsMs);
+                    _semaphore.Release();
 
                     if (!response.IsSuccessStatusCode)
                     { 
@@ -39,7 +51,6 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
                     JObject jsonObject = JObject.Parse(json);
                     _topSummoners = JsonConvert.DeserializeObject<List<TopSummoner>>(jsonObject["entries"].ToString());
 
-                    
                     //Order the summoners based on how much league points the have
                     _topSummoners = _topSummoners.OrderByDescending(s => s.LeaguePoints).ToList();
 
@@ -56,61 +67,108 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
 
                     foreach (var summoner in _topSummoners)
                     {
-                        parallelTasks.Add(LoadSummonerInfoFromIdAsync(summoner.Id, summoner));
+                        parallelTasks.Add(LoadSummonerInfoAsync(summoner));
                     }
                     // Wait for all tasks to complete
                     await Task.WhenAll(parallelTasks);
                 }
                 catch (Exception ex)
-                {
-               
+                {               
                     Console.WriteLine(ex.Message);
                 }
             }
         }
 
-        private async Task LoadSummonerInfoFromIdAsync(string id,Summoner outSummoner )
-        {
-            string endpoint = $"https://euw1.api.riotgames.com/lol/summoner/v4/summoners/{id}";
-            //no return value because outSummoner gets it's property values from different endpoints
-            await LoadSummonerInfoAsync(endpoint, outSummoner);       
-        }
-
-        private async Task LoadSummonerInfoFromNameAsync(string name, Summoner outSummoner)
-        {
-            string endpoint = $"https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/{name}";
-            await LoadSummonerInfoAsync(endpoint , outSummoner);
-        }
-
-        private async Task LoadSummonerInfoAsync(string endpoint, Summoner outSummoner)
+        private async Task LoadSummonerInfoAsync(Summoner outSummoner)
         {
             using (HttpClient client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("X-Riot-Token", _apiKey);
-                await Task.Delay(3000);
-                try
-                {
-                    var response = await client.GetAsync(endpoint);
 
-                    if (!response.IsSuccessStatusCode)
-                    {
-                        throw new HttpRequestException(response.ReasonPhrase);
-                    }
+              
+                await LoadLeagueV4EntriesAsync(outSummoner, client);
+                await LoadSummonerV4Async(outSummoner, client);
+               
 
-                    string json = await response.Content.ReadAsStringAsync();
-
-                    outSummoner.SummonerInfo = JsonConvert.DeserializeObject<SummonerInfo>(json);
-                }
-                catch (Exception ex)
-                {
-
-                    Console.WriteLine(ex.Message);
-                }
             }
         }
 
-       
+        //Api call to League-V4-Entries endpoint
+        private async Task LoadLeagueV4EntriesAsync(Summoner outSummoner, HttpClient client)
+        {
+            try
+            {
+                await _semaphore.WaitAsync();
+                //League-v4-entries endpoint call
+                string endpoint = $"https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/{outSummoner.Id}";
+                HttpResponseMessage response = await client.GetAsync(endpoint);
 
+                await Task.Delay(_delayBetweenRequestsMs);
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new HttpRequestException(response.ReasonPhrase);
+                }
+
+                string json = await response.Content.ReadAsStringAsync();
+                List<RankInfo> allRanksInfo = JsonConvert.DeserializeObject<List<RankInfo>>(json);
+                var rankedSolo5v5Data = allRanksInfo.Where(d => d.QueueType == "RANKED_SOLO_5x5").FirstOrDefault();
+                outSummoner.RankInfo = rankedSolo5v5Data;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception thrown when pulling from League-V4-entries endpoint: {ex.Message}");
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
+        }
+
+        //API call to Summoner-V4 endpoint
+        private async Task LoadSummonerV4Async(Summoner outSummoner, HttpClient client)
+        {
+            try
+            {
+                await _semaphore.WaitAsync();
+                HttpResponseMessage response;
+                string endpoint = string.Empty;
+                //Summoner-v4 endpoit call
+                //These 2 endpoints return the same thing, but sometimes we only have the name and sometimes we only have the id
+                if (outSummoner.Id != null)
+                {
+                    endpoint = $"https://euw1.api.riotgames.com/lol/summoner/v4/summoners/{outSummoner.Id}";
+                    response = await client.GetAsync(endpoint);
+                }
+                else if (outSummoner.SummonerInfo.Name != string.Empty)
+                {
+                    endpoint = $"https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/{outSummoner.SummonerInfo.Name}";
+                    response = await client.GetAsync(endpoint);
+                }
+                else
+                {
+                    throw new Exception("Id or Name should be know in order to extract summoner info");
+                }
+
+                await Task.Delay(_delayBetweenRequestsMs);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new HttpRequestException(response.ReasonPhrase);
+                }
+
+                string json = await response.Content.ReadAsStringAsync();
+                outSummoner.SummonerInfo = JsonConvert.DeserializeObject<SummonerInfo>(json);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception thrown when pulling from Summoner-v4 endpoint: {ex.Message}");
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
+           
+        }
 
         public async Task<List<TopSummoner>> GetTopSummonersAsync(bool reloadData)
         {

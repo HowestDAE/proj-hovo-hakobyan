@@ -15,8 +15,10 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Model
 
         [JsonIgnore]
         public SummonerInfo SummonerInfo { get; set; }
+
         [JsonIgnore]
         public RankInfo RankInfo { get; set; }
+
         [JsonIgnore]
         public string ImageUrl
         {
@@ -51,6 +53,9 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Model
 
     public class RankInfo
     {
+        [JsonProperty("queueType")]
+        public string QueueType { get; set; }
+
         [JsonProperty("tier")]
         public string Tier { get; set; }
 
