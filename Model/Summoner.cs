@@ -20,14 +20,16 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Model
         public RankInfo RankInfo { get; set; }
 
         [JsonIgnore]
-        public string ImageUrl
+        public string ProfileIconUrl
         {
             get
             {
                 return $"http://ddragon.leagueoflegends.com/cdn/13.6.1/img/profileicon/{SummonerInfo.ProfileIconId}.png";
             }
         }
-       
+
+        [JsonIgnore]
+        public List<MasteryInfo> MasteryInfos { get; set; }
     }
 
     public class TopSummoner : Summoner
@@ -61,5 +63,41 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Model
 
         [JsonProperty("rank")]
         public string Rank { get; set; }
+    }
+
+    public class MasteryInfo
+    {
+        [JsonProperty("championId")]
+        public int ChampoinId { get; set; }
+
+        [JsonProperty("championLevel")]
+        public int ChampionLevel { get; set; }
+
+        [JsonProperty("championPoints")]
+        public string ChampionPoints { get; set; }
+
+        private ChampionInfo _champInfo = new ChampionInfo();
+        [JsonIgnore]
+        public ChampionInfo ChampionInfo
+        {
+            get { return _champInfo; }
+            set { _champInfo = value; }
+        }
+    }
+
+    public class ChampionInfo
+    {
+        public string Name { get; set; }
+
+        public string Title { get; set; }
+
+        [JsonIgnore]
+        public string ProfileIconUrl
+        {
+            get
+            {
+                return $"http://ddragon.leagueoflegends.com/cdn/13.6.1/img/champion/{Name}.png";
+            }
+        }
     }
 }

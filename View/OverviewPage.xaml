@@ -72,7 +72,7 @@
                         </Grid.ColumnDefinitions>
                         <TextBlock Style="{StaticResource defaultStyle}" Text="{Binding LadderRank}"/>
                         <StackPanel Grid.Column="1" Orientation="Horizontal">
-                            <Image Source="{Binding ImageUrl, Converter={StaticResource UrlToImageConv}}" Width="30" Height="30" Margin="4" />
+                            <Image Source="{Binding ProfileIconUrl, Converter={StaticResource UrlToImageConv}}" Width="30" Height="30" Margin="4" />
                             <TextBlock Style="{StaticResource summonerNameStyle}" Text="{Binding SummonerInfo.Name }"/>
                         </StackPanel>
                       

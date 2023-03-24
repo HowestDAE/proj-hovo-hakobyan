@@ -44,7 +44,7 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
 
         private async void GetTopPlayersAsync()
         {
-            TopSummoners = await _summonerAPIRepository.GetTopSummonersAsync(false);
+            TopSummoners = await _summonerAPIRepository.GetTopSummonersAsync();
             OnPropertyChanged(nameof(TopSummoners));
             LoadingText = string.Empty;
         }

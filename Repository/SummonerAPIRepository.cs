@@ -17,10 +17,10 @@ using System.Diagnostics;
 
 namespace _2DAE15_HovhannesHakobyan_Exam.Repository
 {
-    public class SummonerAPIRepository
+    public class SummonerAPIRepository : ISummonerRepository
     {
         private List<TopSummoner> _topSummoners;
-        private string _apiKey = "RGAPI-9c70a68f-66f2-4af6-b29d-fd9d76665d70";
+        private string _apiKey = "RGAPI-99a17753-df9a-4076-8e43-d37956fe50f5";
         private int _nrTopPlayers = 15;
 
         //To avoid having Too Many Request exceptions
@@ -85,11 +85,16 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
             {
                 client.DefaultRequestHeaders.Add("X-Riot-Token", _apiKey);
 
-              
-                await LoadLeagueV4EntriesAsync(outSummoner, client);
-                await LoadSummonerV4Async(outSummoner, client);
+                await Task.WhenAll(
+                     LoadLeagueV4EntriesAsync(outSummoner, client),
+                     LoadSummonerV4Async(outSummoner, client),
+                     LoadChampionMasteryV4Async(outSummoner, client)
+                    );
                
 
+                //Important
+                //Can only be executre after the above endpoint calls are made
+                await LoadChampionInfoAsync(outSummoner, client);
             }
         }
 
@@ -170,9 +175,87 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
            
         }
 
-        public async Task<List<TopSummoner>> GetTopSummonersAsync(bool reloadData)
+        private async Task LoadChampionMasteryV4Async(Summoner outSummoner, HttpClient client)
         {
-            if (_topSummoners ==null || reloadData)
+            try
+            {
+                await _semaphore.WaitAsync();
+                const int champCount = 5;
+
+                string endpoint = $"https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/{outSummoner.Id}/top?count={champCount}";
+                var response = await client.GetAsync(endpoint);
+
+                await Task.Delay(_delayBetweenRequestsMs);
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new HttpRequestException(response.ReasonPhrase);
+                }
+
+                string json = await response.Content.ReadAsStringAsync();
+                outSummoner.MasteryInfos = JsonConvert.DeserializeObject<List<MasteryInfo>>(json);
+             
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception thrown when pulling from Champion-Mastery-V4 endpoint: {ex.Message}");
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
+        }
+
+        private async Task LoadChampionInfoAsync(Summoner outSummoner, HttpClient client)
+        {
+            try
+            {
+                await _semaphore.WaitAsync();
+
+                string endpoint = $"http://ddragon.leagueoflegends.com/cdn/13.6.1/data/en_US/champion.json";
+                var response = await client.GetAsync(endpoint);
+
+                await Task.Delay(_delayBetweenRequestsMs);
+
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new HttpRequestException(response.ReasonPhrase);
+                }
+
+                string json = await response.Content.ReadAsStringAsync();
+
+                // Deserialize the JSON into a JObject
+                JObject championList = JObject.Parse(json);
+
+
+                for (int i = 0; i < outSummoner.MasteryInfos.Count; i++)
+                {
+                    int key = outSummoner.MasteryInfos[i].ChampoinId;
+
+                    //Get the matching champion
+                    JToken championToken = championList["data"].Children().FirstOrDefault(c => c.First["key"].ToString() == key.ToString())?.First;
+
+                    if(championToken!=null)
+                    {
+                        outSummoner.MasteryInfos[i].ChampionInfo.Name = (string)championToken.SelectToken("name");
+                        outSummoner.MasteryInfos[i].ChampionInfo.Title = (string)championToken.SelectToken("title");
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
+        }
+
+        public async Task<List<TopSummoner>> GetTopSummonersAsync()
+        {
+            if (_topSummoners ==null)
             {
                 await LoadTopSummonersAsync();
             }

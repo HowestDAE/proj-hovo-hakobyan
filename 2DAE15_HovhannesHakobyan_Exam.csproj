@@ -86,9 +86,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Repository\ISummonerRepository.cs" />
     <Compile Include="Repository\SummonerAPIRepository.cs" />
+    <Compile Include="Repository\SummonerLocalRepository.cs" />
     <Compile Include="ViewModel\MainVM.cs" />
     <Compile Include="ViewModel\OverviewVM.cs" />
+    <Compile Include="View\Converters\RankToImageConverter.cs" />
     <Compile Include="View\Converters\UrlToImageConverter.cs" />
     <Compile Include="View\OverviewPage.xaml.cs">
       <DependentUpon>OverviewPage.xaml</DependentUpon>
@@ -140,6 +143,26 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\RankedEmblem\emblem-bronze.png" />
+    <Resource Include="Resources\RankedEmblem\emblem-challenger.png" />
+    <Resource Include="Resources\RankedEmblem\emblem-diamond.png" />
+    <Resource Include="Resources\RankedEmblem\emblem-gold.png" />
+    <Resource Include="Resources\RankedEmblem\emblem-grandmaster.png" />
+    <Resource Include="Resources\RankedEmblem\emblem-iron.png" />
+    <Resource Include="Resources\RankedEmblem\emblem-master.png" />
+    <Resource Include="Resources\RankedEmblem\emblem-platinum.png" />
+    <Resource Include="Resources\RankedEmblem\emblem-silver.png" />
+    <Resource Include="Resources\RankedEmblem\wings\wings_bronze.png" />
+    <Resource Include="Resources\RankedEmblem\wings\wings_challenger.png" />
+    <Resource Include="Resources\RankedEmblem\wings\wings_diamond.png" />
+    <Resource Include="Resources\RankedEmblem\wings\wings_gold.png" />
+    <Resource Include="Resources\RankedEmblem\wings\wings_grandmaster.png" />
+    <Resource Include="Resources\RankedEmblem\wings\wings_iron.png" />
+    <Resource Include="Resources\RankedEmblem\wings\wings_master.png" />
+    <Resource Include="Resources\RankedEmblem\wings\wings_platinum.png" />
+    <Resource Include="Resources\RankedEmblem\wings\wings_silver.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\CommunityToolkit.Mvvm.8.1.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets" Condition="Exists('packages\CommunityToolkit.Mvvm.8.1.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets')" />
