@@ -14,18 +14,31 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
     {
         public Page CurrentPage { get; set; }
         public RelayCommand SwitchPageCommand { get; private set; }
-        public OverviewPage OverviewPage { get; set; }
+        OverviewPage OverviewPage { get; set; }
+        DetailsPage DetailsPage { get; set; }
+        
 
         public MainVM()
         {
             SwitchPageCommand = new RelayCommand(SwitchPage);
             OverviewPage = new OverviewPage();
+            DetailsPage = new DetailsPage();
             CurrentPage = OverviewPage;
         }
 
         private void SwitchPage()
         {
+            //If we are in Main page
+            if (CurrentPage is OverviewPage)
+            {
+                //Go back to prev
+            }
+            else if(CurrentPage is DetailsPage)
+            {
+                CurrentPage = OverviewPage;
 
+            }
+            OnPropertyChanged(nameof(CurrentPage));
         }
     }
 }

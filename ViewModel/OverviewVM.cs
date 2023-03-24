@@ -12,7 +12,7 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
 {
     public class OverviewVM : ObservableObject
     {
-        private SummonerAPIRepository _summonerAPIRepository;
+        private ISummonerRepository _summonerAPIRepository;
        
         private string _loadingText;
         public string LoadingText
@@ -27,14 +27,15 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
 
         public List<TopSummoner> TopSummoners { get; set; }
 
-        public SummonerAPIRepository SummonerAPIRepository
+        public ISummonerRepository SummonerAPIRepository
         {
             get { return _summonerAPIRepository; }
         }
 
         public OverviewVM()
         {
-            _summonerAPIRepository = new SummonerAPIRepository();
+            //_summonerAPIRepository = new SummonerAPIRepository();
+            _summonerAPIRepository = new SummonerLocalRepository();
 
             //Loading
             LoadingText = "Loading, please wait...";

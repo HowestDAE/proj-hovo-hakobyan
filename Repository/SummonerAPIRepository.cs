@@ -14,6 +14,7 @@ using System.Xml.Linq;
 using System.Windows.Markup;
 using System.Threading;
 using System.Diagnostics;
+using System.IO;
 
 namespace _2DAE15_HovhannesHakobyan_Exam.Repository
 {
@@ -253,12 +254,28 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
             }
         }
 
+        //This method serialized the _topSummoners into a local JSON 
+        private void SerializeTopSummoners()
+        {
+            if (_topSummoners == null)
+                return;
+
+            string json = JsonConvert.SerializeObject(_topSummoners, Formatting.Indented);
+
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"..","..", "Resources", "Data", "topSummoners.json");
+
+            System.IO.File.WriteAllText(filePath, json);
+
+        }
+
         public async Task<List<TopSummoner>> GetTopSummonersAsync()
         {
             if (_topSummoners ==null)
             {
                 await LoadTopSummonersAsync();
+                SerializeTopSummoners();
             }
+           
 
             return _topSummoners;
         }

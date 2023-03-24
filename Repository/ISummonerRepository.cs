@@ -9,6 +9,6 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
 {
     public interface ISummonerRepository
     {
-        
+        Task<List<TopSummoner>> GetTopSummonersAsync();
     }
 }

@@ -13,10 +13,8 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Model
         public string Id { get; set; }
 
 
-        [JsonIgnore]
         public SummonerInfo SummonerInfo { get; set; }
 
-        [JsonIgnore]
         public RankInfo RankInfo { get; set; }
 
         [JsonIgnore]
@@ -28,7 +26,6 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Model
             }
         }
 
-        [JsonIgnore]
         public List<MasteryInfo> MasteryInfos { get; set; }
     }
 
@@ -37,7 +34,6 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Model
         [JsonProperty("leaguePoints")]
         public int LeaguePoints { get; set; }
 
-        [JsonIgnore]
         public int LadderRank { get; set; }
     }
 
@@ -77,7 +73,8 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Model
         public string ChampionPoints { get; set; }
 
         private ChampionInfo _champInfo = new ChampionInfo();
-        [JsonIgnore]
+
+
         public ChampionInfo ChampionInfo
         {
             get { return _champInfo; }
