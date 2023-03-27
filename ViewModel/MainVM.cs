@@ -24,20 +24,24 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
             OverviewPage = new OverviewPage();
             DetailsPage = new DetailsPage();
             CurrentPage = OverviewPage;
+
+            // Get the OverviewVM from the OverviewPage to subscribe to ShowDetails
+            OverviewVM overviewVM = OverviewPage.DataContext as OverviewVM;
+            if (overviewVM != null)
+            {
+                // Subscribe to the ShowDetailsRequested event
+                overviewVM.ShowDetailsRequest += OverviewVM_ShowDetailsRequest;
+            }
         }
 
         private void SwitchPage()
         {
-            //If we are in Main page
-            if (CurrentPage is OverviewPage)
-            {
-                //Go back to prev
-            }
-            else if(CurrentPage is DetailsPage)
-            {
-                CurrentPage = OverviewPage;
+   
+        }
 
-            }
+        private void OverviewVM_ShowDetailsRequest(object sender, EventArgs e)
+        {
+            CurrentPage = DetailsPage;
             OnPropertyChanged(nameof(CurrentPage));
         }
     }

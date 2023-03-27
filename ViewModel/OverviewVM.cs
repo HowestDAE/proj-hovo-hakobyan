@@ -14,8 +14,10 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
     public class OverviewVM : ObservableObject
     {
         private ISummonerRepository _summonerRepository;
-       
+
         private string _loadingText;
+        private TopSummoner selectedSummoner;
+
         public string LoadingText
         {
             get { return _loadingText; }
@@ -26,8 +28,6 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
             }
         }
 
-        public RelayCommand ShowDetailsCommand { get; private set; }
-
         public List<TopSummoner> TopSummoners { get; set; }
 
         public ISummonerRepository SummonerAPIRepository
@@ -37,15 +37,28 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
 
         public event EventHandler ShowDetailsRequest;
 
+        private TopSummoner _selectedSummoner;
+        public TopSummoner SelectedSummoner
+        {
+            get 
+            {
+                return _selectedSummoner;
+            }
+            set
+            {
+                _selectedSummoner = value;
+                ShowDetail();
+            }
+        }
+
         public OverviewVM()
         {
             _summonerRepository = new SummonerAPIRepository();
-            ShowDetailsCommand = new RelayCommand(ShowDetail);
 
             //Loading
             LoadingText = "Loading, please wait...";
             GetTopPlayersAsync();
-         
+
         }
 
         private async void GetTopPlayersAsync()
@@ -65,17 +78,16 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
 
             OnPropertyChanged(nameof(TopSummoners));
 
-           
+
             LoadingText = string.Empty;
         }
 
         private void ShowDetail()
         {
-            Console.WriteLine("Showing details page");
-
+            Console.WriteLine("ShowDetail()");
             //Used to let the main vm know about this
             ShowDetailsRequest?.Invoke(this, EventArgs.Empty);
-           
+
         }
     }
 }

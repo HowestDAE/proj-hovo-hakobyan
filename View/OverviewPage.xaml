@@ -13,7 +13,7 @@
 
   
     <Page.DataContext>
-        <vm:OverviewVM />
+        <vm:OverviewVM/>
     </Page.DataContext>
 
     <Page.Resources>
@@ -61,7 +61,7 @@
         <TextBlock Style="{StaticResource titleStyle}" Text="Summoner" Grid.Column="1"/>
         <TextBlock Style="{StaticResource titleStyle}" Text="LP" Grid.Column="2"/>
         <!--Listbox to list the summoners-->
-        <ListBox ItemsSource="{Binding TopSummoners}" Background="Transparent" HorizontalContentAlignment="Stretch" Grid.Row="1" Grid.ColumnSpan="3">
+        <ListBox ItemsSource="{Binding TopSummoners}" SelectedItem="{Binding SelectedSummoner}" Background="Transparent" HorizontalContentAlignment="Stretch" Grid.Row="1" Grid.ColumnSpan="3">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
