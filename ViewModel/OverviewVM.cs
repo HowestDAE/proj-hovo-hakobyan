@@ -1,6 +1,7 @@
 ﻿using _2DAE15_HovhannesHakobyan_Exam.Model;
 using _2DAE15_HovhannesHakobyan_Exam.Repository;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
 {
     public class OverviewVM : ObservableObject
     {
-        private ISummonerRepository _summonerAPIRepository;
+        private ISummonerRepository _summonerRepository;
        
         private string _loadingText;
         public string LoadingText
@@ -25,17 +26,21 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
             }
         }
 
+        public RelayCommand ShowDetailsCommand { get; private set; }
+
         public List<TopSummoner> TopSummoners { get; set; }
 
         public ISummonerRepository SummonerAPIRepository
         {
-            get { return _summonerAPIRepository; }
+            get { return _summonerRepository; }
         }
+
+        public event EventHandler ShowDetailsRequest;
 
         public OverviewVM()
         {
-            //_summonerAPIRepository = new SummonerAPIRepository();
-            _summonerAPIRepository = new SummonerLocalRepository();
+            _summonerRepository = new SummonerAPIRepository();
+            ShowDetailsCommand = new RelayCommand(ShowDetail);
 
             //Loading
             LoadingText = "Loading, please wait...";
@@ -45,9 +50,32 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
 
         private async void GetTopPlayersAsync()
         {
-            TopSummoners = await _summonerAPIRepository.GetTopSummonersAsync();
+            //If we can't read the data from the api, switch to local
+            try
+            {
+                TopSummoners = await _summonerRepository.GetTopSummonersAsync();
+                Console.WriteLine("Using API");
+            }
+            catch (Exception ex)
+            {
+                _summonerRepository = new SummonerLocalRepository();
+                TopSummoners = await _summonerRepository.GetTopSummonersAsync();
+                Console.WriteLine("Using Local");
+            }
+
             OnPropertyChanged(nameof(TopSummoners));
+
+           
             LoadingText = string.Empty;
+        }
+
+        private void ShowDetail()
+        {
+            Console.WriteLine("Showing details page");
+
+            //Used to let the main vm know about this
+            ShowDetailsRequest?.Invoke(this, EventArgs.Empty);
+           
         }
     }
 }

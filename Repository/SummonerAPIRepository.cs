@@ -21,7 +21,7 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
     public class SummonerAPIRepository : ISummonerRepository
     {
         private List<TopSummoner> _topSummoners;
-        private string _apiKey = "RGAPI-99a17753-df9a-4076-8e43-d37956fe50f5";
+        private string _apiKey = "RGAPI-f9eb28a9-7057-4dae-b3af-871d02b89cc7";
         private int _nrTopPlayers = 15;
 
         //To avoid having Too Many Request exceptions
@@ -76,6 +76,7 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
                 catch (Exception ex)
                 {               
                     Console.WriteLine(ex.Message);
+                    throw ex;
                 }
             }
         }
@@ -86,11 +87,19 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
             {
                 client.DefaultRequestHeaders.Add("X-Riot-Token", _apiKey);
 
-                await Task.WhenAll(
-                     LoadLeagueV4EntriesAsync(outSummoner, client),
-                     LoadSummonerV4Async(outSummoner, client),
-                     LoadChampionMasteryV4Async(outSummoner, client)
-                    );
+                try
+                {
+                    await Task.WhenAll(
+                    LoadLeagueV4EntriesAsync(outSummoner, client),
+                    LoadSummonerV4Async(outSummoner, client),
+                    LoadChampionMasteryV4Async(outSummoner, client)
+                   );
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+               
                
 
                 //Important
@@ -123,6 +132,7 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
             catch (Exception ex)
             {
                 Console.WriteLine($"Exception thrown when pulling from League-V4-entries endpoint: {ex.Message}");
+                throw ex;
             }
             finally
             {
@@ -168,6 +178,7 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
             catch (Exception ex)
             {
                 Console.WriteLine($"Exception thrown when pulling from Summoner-v4 endpoint: {ex.Message}");
+                throw ex;
             }
             finally
             {
@@ -199,6 +210,7 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
             catch (Exception ex)
             {
                 Console.WriteLine($"Exception thrown when pulling from Champion-Mastery-V4 endpoint: {ex.Message}");
+                throw ex;
             }
             finally
             {
@@ -243,10 +255,9 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                throw ex;
             }
             finally
             {
@@ -272,8 +283,16 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
         {
             if (_topSummoners ==null)
             {
-                await LoadTopSummonersAsync();
-                SerializeTopSummoners();
+                try
+                {
+                    await LoadTopSummonersAsync();
+                    SerializeTopSummoners();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Couldn't load the model");
+                    throw ex;
+                }
             }
            
 
