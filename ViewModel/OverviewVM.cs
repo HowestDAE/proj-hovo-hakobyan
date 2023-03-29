@@ -34,10 +34,10 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
             get { return _summonerRepository; }
         }
 
-        public event EventHandler ShowDetailsRequest;
+        public event EventHandler<Summoner> ShowDetailsRequest;
 
-        private TopSummoner _selectedSummoner;
-        public TopSummoner SelectedSummoner
+        private Summoner _selectedSummoner;
+        public Summoner SelectedSummoner
         {
             get 
             {
@@ -82,7 +82,7 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
         private void ShowDetail()
         {
             //Used to let the main vm know about this
-            ShowDetailsRequest?.Invoke(this, EventArgs.Empty);
+            ShowDetailsRequest?.Invoke(this, _selectedSummoner);
 
         }
     }

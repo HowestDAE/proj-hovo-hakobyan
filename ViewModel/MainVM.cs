@@ -1,4 +1,5 @@
-﻿using _2DAE15_HovhannesHakobyan_Exam.View;
+﻿using _2DAE15_HovhannesHakobyan_Exam.Model;
+using _2DAE15_HovhannesHakobyan_Exam.View;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System;
@@ -48,9 +49,12 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
             OnPropertyChanged(nameof(CurrentPage));
         }
 
-        private void OverviewVM_ShowDetailsRequest(object sender, EventArgs e)
+        private void OverviewVM_ShowDetailsRequest(object sender, Summoner currentSummoner)
         {
             CurrentPage = DetailsPage;
+        
+            (DetailsPage.DataContext as DetailsVM).CurrentSummoner = currentSummoner;
+
             OnPropertyChanged(nameof(CurrentPage));
         }
 

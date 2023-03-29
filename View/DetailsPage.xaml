@@ -16,9 +16,53 @@
     </Page.DataContext>
 
     <Page.Resources>
-        
+        <conv:UrlToImageConverter x:Key="UrlToImageConv" />
     </Page.Resources>
     <Grid>
-        
+
+        <Grid.Resources>
+            <!-- Default text style -->
+            <Style x:Key="defaultStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property ="Foreground" Value="#7B7A8E"/>
+            </Style>
+
+            <!-- Name style -->
+            <Style x:Key="summonerNameStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property ="Foreground" Value="White"/>
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="Margin" Value="3,3"/>
+            </Style>
+
+            <!-- Title style -->
+            <Style x:Key="titleStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontWeight" Value="ExtraBold" />
+                <Setter Property ="Foreground" Value="#7B7A8E"/>
+                <Setter Property="Margin" Value="3,3"/>
+            </Style>
+        </Grid.Resources>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.ColumnSpan="2">
+            <Image Source="{Binding CurrentSummoner.ProfileIconUrl, Converter={StaticResource UrlToImageConv}}" Width="100" Height="100" VerticalAlignment="top" Margin="0,20,0,0"/>
+            <TextBlock Text="{Binding CurrentSummoner.SummonerInfo.Name}" HorizontalAlignment="Center" Style="{StaticResource summonerNameStyle}"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Lvl " TextWrapping="Wrap" Style="{StaticResource defaultStyle}"/>
+                <TextBlock Text="{Binding CurrentSummoner.SummonerInfo.Level}" TextWrapping="Wrap" Style="{StaticResource defaultStyle}"/>
+            </StackPanel> 
+        </StackPanel>
     </Grid>
 </Page>
