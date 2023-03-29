@@ -1,135 +1,11 @@
 [
   {
-    "leaguePoints": 1762,
+    "leaguePoints": 1786,
     "LadderRank": 1,
-    "summonerId": "dKHZrAX_DznnAbB_Cyzeojn4GoYC53A-qX-Hos2zJJE62dJ1lRwIqmOMaw",
-    "SummonerInfo": {
-      "profileIconId": 5735,
-      "summonerLevel": 83,
-      "name": "Noah7"
-    },
-    "RankInfo": {
-      "queueType": "RANKED_SOLO_5x5",
-      "tier": "CHALLENGER",
-      "rank": "I"
-    },
-    "MasteryInfos": [
-      {
-        "championId": 221,
-        "championLevel": 5,
-        "championPoints": "67872",
-        "ChampionInfo": {
-          "Name": "Zeri",
-          "Title": "The Spark of Zaun"
-        }
-      },
-      {
-        "championId": 236,
-        "championLevel": 5,
-        "championPoints": "38176",
-        "ChampionInfo": {
-          "Name": "Lucian",
-          "Title": "the Purifier"
-        }
-      },
-      {
-        "championId": 104,
-        "championLevel": 5,
-        "championPoints": "33166",
-        "ChampionInfo": {
-          "Name": "Graves",
-          "Title": "the Outlaw"
-        }
-      },
-      {
-        "championId": 81,
-        "championLevel": 5,
-        "championPoints": "27982",
-        "ChampionInfo": {
-          "Name": "Ezreal",
-          "Title": "the Prodigal Explorer"
-        }
-      },
-      {
-        "championId": 51,
-        "championLevel": 4,
-        "championPoints": "16778",
-        "ChampionInfo": {
-          "Name": "Caitlyn",
-          "Title": "the Sheriff of Piltover"
-        }
-      }
-    ]
-  },
-  {
-    "leaguePoints": 1759,
-    "LadderRank": 2,
-    "summonerId": "HKFNK_WDsYUWdHhRU3otQ-xii_jHQVtGm99zWASBErBQTbhypes39mYgcQ",
-    "SummonerInfo": {
-      "profileIconId": 6,
-      "summonerLevel": 73,
-      "name": "Twitch Sinerias"
-    },
-    "RankInfo": {
-      "queueType": "RANKED_SOLO_5x5",
-      "tier": "CHALLENGER",
-      "rank": "I"
-    },
-    "MasteryInfos": [
-      {
-        "championId": 11,
-        "championLevel": 5,
-        "championPoints": "263876",
-        "ChampionInfo": {
-          "Name": "Master Yi",
-          "Title": "the Wuju Bladesman"
-        }
-      },
-      {
-        "championId": 245,
-        "championLevel": 3,
-        "championPoints": "7028",
-        "ChampionInfo": {
-          "Name": "Ekko",
-          "Title": "the Boy Who Shattered Time"
-        }
-      },
-      {
-        "championId": 141,
-        "championLevel": 2,
-        "championPoints": "5649",
-        "ChampionInfo": {
-          "Name": "Kayn",
-          "Title": "the Shadow Reaper"
-        }
-      },
-      {
-        "championId": 56,
-        "championLevel": 2,
-        "championPoints": "4187",
-        "ChampionInfo": {
-          "Name": "Nocturne",
-          "Title": "the Eternal Nightmare"
-        }
-      },
-      {
-        "championId": 427,
-        "championLevel": 2,
-        "championPoints": "3533",
-        "ChampionInfo": {
-          "Name": "Ivern",
-          "Title": "the Green Father"
-        }
-      }
-    ]
-  },
-  {
-    "leaguePoints": 1691,
-    "LadderRank": 3,
     "summonerId": "faWRC3PiqVZmrbAt5J0fjYMaMSr6s1LVnilbQK0o5rJ5Z7xN",
     "SummonerInfo": {
       "profileIconId": 5414,
-      "summonerLevel": 355,
+      "summonerLevel": 356,
       "name": "ViV NEXT ADKING"
     },
     "RankInfo": {
@@ -141,7 +17,7 @@
       {
         "championId": 145,
         "championLevel": 7,
-        "championPoints": "258398",
+        "championPoints": "258,398",
         "ChampionInfo": {
           "Name": "Kai'Sa",
           "Title": "Daughter of the Void"
@@ -150,7 +26,7 @@
       {
         "championId": 202,
         "championLevel": 7,
-        "championPoints": "164760",
+        "championPoints": "164,760",
         "ChampionInfo": {
           "Name": "Jhin",
           "Title": "the Virtuoso"
@@ -159,7 +35,7 @@
       {
         "championId": 81,
         "championLevel": 7,
-        "championPoints": "147134",
+        "championPoints": "147,134",
         "ChampionInfo": {
           "Name": "Ezreal",
           "Title": "the Prodigal Explorer"
@@ -168,7 +44,7 @@
       {
         "championId": 119,
         "championLevel": 7,
-        "championPoints": "141654",
+        "championPoints": "141,654",
         "ChampionInfo": {
           "Name": "Draven",
           "Title": "the Glorious Executioner"
@@ -177,7 +53,7 @@
       {
         "championId": 18,
         "championLevel": 7,
-        "championPoints": "138933",
+        "championPoints": "138,933",
         "ChampionInfo": {
           "Name": "Tristana",
           "Title": "the Yordle Gunner"
@@ -186,13 +62,13 @@
     ]
   },
   {
-    "leaguePoints": 1685,
-    "LadderRank": 4,
-    "summonerId": "V7oP4c2vPq4yMh8dUn5XwRtXXnEwtarekfmOC-GvPnImhJPS5cQ-7VHplQ",
+    "leaguePoints": 1763,
+    "LadderRank": 2,
+    "summonerId": "dKHZrAX_DznnAbB_Cyzeojn4GoYC53A-qX-Hos2zJJE62dJ1lRwIqmOMaw",
     "SummonerInfo": {
-      "profileIconId": 5663,
-      "summonerLevel": 136,
-      "name": "zyb"
+      "profileIconId": 5736,
+      "summonerLevel": 85,
+      "name": "Noah7"
     },
     "RankInfo": {
       "queueType": "RANKED_SOLO_5x5",
@@ -201,241 +77,55 @@
     },
     "MasteryInfos": [
       {
+        "championId": 221,
+        "championLevel": 5,
+        "championPoints": "69,115",
+        "ChampionInfo": {
+          "Name": "Zeri",
+          "Title": "The Spark of Zaun"
+        }
+      },
+      {
+        "championId": 236,
+        "championLevel": 5,
+        "championPoints": "38,176",
+        "ChampionInfo": {
+          "Name": "Lucian",
+          "Title": "the Purifier"
+        }
+      },
+      {
         "championId": 104,
         "championLevel": 5,
-        "championPoints": "53961",
+        "championPoints": "34,990",
         "ChampionInfo": {
           "Name": "Graves",
           "Title": "the Outlaw"
         }
       },
       {
-        "championId": 360,
-        "championLevel": 7,
-        "championPoints": "49679",
-        "ChampionInfo": {
-          "Name": "Samira",
-          "Title": "the Desert Rose"
-        }
-      },
-      {
-        "championId": 203,
+        "championId": 81,
         "championLevel": 5,
-        "championPoints": "36043",
+        "championPoints": "27,982",
         "ChampionInfo": {
-          "Name": "Kindred",
-          "Title": "The Eternal Hunters"
+          "Name": "Ezreal",
+          "Title": "the Prodigal Explorer"
         }
       },
       {
-        "championId": 91,
-        "championLevel": 5,
-        "championPoints": "34371",
+        "championId": 51,
+        "championLevel": 4,
+        "championPoints": "16,778",
         "ChampionInfo": {
-          "Name": "Talon",
-          "Title": "the Blade's Shadow"
-        }
-      },
-      {
-        "championId": 62,
-        "championLevel": 5,
-        "championPoints": "27064",
-        "ChampionInfo": {
-          "Name": "Wukong",
-          "Title": "the Monkey King"
+          "Name": "Caitlyn",
+          "Title": "the Sheriff of Piltover"
         }
       }
     ]
   },
   {
-    "leaguePoints": 1622,
-    "LadderRank": 5,
-    "summonerId": "6Niz1763cIBdqfkpjfBioCUsAa3LZNF6-_FkKPRnNZJbQcs",
-    "SummonerInfo": {
-      "profileIconId": 3582,
-      "summonerLevel": 424,
-      "name": "Thumbs Down"
-    },
-    "RankInfo": {
-      "queueType": "RANKED_SOLO_5x5",
-      "tier": "CHALLENGER",
-      "rank": "I"
-    },
-    "MasteryInfos": [
-      {
-        "championId": 555,
-        "championLevel": 7,
-        "championPoints": "421922",
-        "ChampionInfo": {
-          "Name": "Pyke",
-          "Title": "the Bloodharbor Ripper"
-        }
-      },
-      {
-        "championId": 412,
-        "championLevel": 7,
-        "championPoints": "361964",
-        "ChampionInfo": {
-          "Name": "Thresh",
-          "Title": "the Chain Warden"
-        }
-      },
-      {
-        "championId": 111,
-        "championLevel": 7,
-        "championPoints": "189279",
-        "ChampionInfo": {
-          "Name": "Nautilus",
-          "Title": "the Titan of the Depths"
-        }
-      },
-      {
-        "championId": 43,
-        "championLevel": 7,
-        "championPoints": "127608",
-        "ChampionInfo": {
-          "Name": "Karma",
-          "Title": "the Enlightened One"
-        }
-      },
-      {
-        "championId": 12,
-        "championLevel": 7,
-        "championPoints": "93612",
-        "ChampionInfo": {
-          "Name": "Alistar",
-          "Title": "the Minotaur"
-        }
-      }
-    ]
-  },
-  {
-    "leaguePoints": 1582,
-    "LadderRank": 6,
-    "summonerId": "T8Ay1TaHxB-Gmb79_zNip__-jEvz5tILZ9zWZYv0gIBB5Cs",
-    "SummonerInfo": {
-      "profileIconId": 4353,
-      "summonerLevel": 849,
-      "name": "Agurin"
-    },
-    "RankInfo": {
-      "queueType": "RANKED_SOLO_5x5",
-      "tier": "CHALLENGER",
-      "rank": "I"
-    },
-    "MasteryInfos": [
-      {
-        "championId": 121,
-        "championLevel": 7,
-        "championPoints": "1558523",
-        "ChampionInfo": {
-          "Name": "Kha'Zix",
-          "Title": "the Voidreaver"
-        }
-      },
-      {
-        "championId": 60,
-        "championLevel": 7,
-        "championPoints": "1493950",
-        "ChampionInfo": {
-          "Name": "Elise",
-          "Title": "the Spider Queen"
-        }
-      },
-      {
-        "championId": 59,
-        "championLevel": 7,
-        "championPoints": "1085043",
-        "ChampionInfo": {
-          "Name": "Jarvan IV",
-          "Title": "the Exemplar of Demacia"
-        }
-      },
-      {
-        "championId": 102,
-        "championLevel": 7,
-        "championPoints": "521774",
-        "ChampionInfo": {
-          "Name": "Shyvana",
-          "Title": "the Half-Dragon"
-        }
-      },
-      {
-        "championId": 28,
-        "championLevel": 7,
-        "championPoints": "449167",
-        "ChampionInfo": {
-          "Name": "Evelynn",
-          "Title": "Agony's Embrace"
-        }
-      }
-    ]
-  },
-  {
-    "leaguePoints": 1565,
-    "LadderRank": 7,
-    "summonerId": "yS0iAJ_Yd8YJhE6aCH-aU_miifY7Qy4EcowMhBAqr-NtZF0",
-    "SummonerInfo": {
-      "profileIconId": 3166,
-      "summonerLevel": 505,
-      "name": "Razørk Activoo"
-    },
-    "RankInfo": {
-      "queueType": "RANKED_SOLO_5x5",
-      "tier": "CHALLENGER",
-      "rank": "I"
-    },
-    "MasteryInfos": [
-      {
-        "championId": 64,
-        "championLevel": 7,
-        "championPoints": "671206",
-        "ChampionInfo": {
-          "Name": "Lee Sin",
-          "Title": "the Blind Monk"
-        }
-      },
-      {
-        "championId": 79,
-        "championLevel": 7,
-        "championPoints": "276629",
-        "ChampionInfo": {
-          "Name": "Gragas",
-          "Title": "the Rabble Rouser"
-        }
-      },
-      {
-        "championId": 245,
-        "championLevel": 7,
-        "championPoints": "260190",
-        "ChampionInfo": {
-          "Name": "Ekko",
-          "Title": "the Boy Who Shattered Time"
-        }
-      },
-      {
-        "championId": 141,
-        "championLevel": 7,
-        "championPoints": "205880",
-        "ChampionInfo": {
-          "Name": "Kayn",
-          "Title": "the Shadow Reaper"
-        }
-      },
-      {
-        "championId": 104,
-        "championLevel": 7,
-        "championPoints": "204728",
-        "ChampionInfo": {
-          "Name": "Graves",
-          "Title": "the Outlaw"
-        }
-      }
-    ]
-  },
-  {
-    "leaguePoints": 1544,
-    "LadderRank": 8,
+    "leaguePoints": 1611,
+    "LadderRank": 3,
     "summonerId": "Lijifvr-N1ktG6nUrYIzTEdrWSzDC1pU90yYoSMSzjPZ8B2uUmiJw0XIow",
     "SummonerInfo": {
       "profileIconId": 29,
@@ -451,7 +141,7 @@
       {
         "championId": 99,
         "championLevel": 4,
-        "championPoints": "19534",
+        "championPoints": "19,534",
         "ChampionInfo": {
           "Name": "Lux",
           "Title": "the Lady of Luminosity"
@@ -460,7 +150,7 @@
       {
         "championId": 497,
         "championLevel": 4,
-        "championPoints": "19431",
+        "championPoints": "19,431",
         "ChampionInfo": {
           "Name": "Rakan",
           "Title": "The Charmer"
@@ -469,7 +159,7 @@
       {
         "championId": 111,
         "championLevel": 4,
-        "championPoints": "18095",
+        "championPoints": "18,095",
         "ChampionInfo": {
           "Name": "Nautilus",
           "Title": "the Titan of the Depths"
@@ -478,7 +168,7 @@
       {
         "championId": 22,
         "championLevel": 3,
-        "championPoints": "9875",
+        "championPoints": "9,875",
         "ChampionInfo": {
           "Name": "Ashe",
           "Title": "the Frost Archer"
@@ -487,7 +177,7 @@
       {
         "championId": 1,
         "championLevel": 3,
-        "championPoints": "9493",
+        "championPoints": "9,493",
         "ChampionInfo": {
           "Name": "Annie",
           "Title": "the Dark Child"
@@ -496,12 +186,260 @@
     ]
   },
   {
-    "leaguePoints": 1527,
-    "LadderRank": 9,
+    "leaguePoints": 1590,
+    "LadderRank": 4,
+    "summonerId": "6Niz1763cIBdqfkpjfBioCUsAa3LZNF6-_FkKPRnNZJbQcs",
+    "SummonerInfo": {
+      "profileIconId": 3582,
+      "summonerLevel": 426,
+      "name": "Thumbs Down"
+    },
+    "RankInfo": {
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "CHALLENGER",
+      "rank": "I"
+    },
+    "MasteryInfos": [
+      {
+        "championId": 555,
+        "championLevel": 7,
+        "championPoints": "422,084",
+        "ChampionInfo": {
+          "Name": "Pyke",
+          "Title": "the Bloodharbor Ripper"
+        }
+      },
+      {
+        "championId": 412,
+        "championLevel": 7,
+        "championPoints": "363,415",
+        "ChampionInfo": {
+          "Name": "Thresh",
+          "Title": "the Chain Warden"
+        }
+      },
+      {
+        "championId": 111,
+        "championLevel": 7,
+        "championPoints": "190,399",
+        "ChampionInfo": {
+          "Name": "Nautilus",
+          "Title": "the Titan of the Depths"
+        }
+      },
+      {
+        "championId": 43,
+        "championLevel": 7,
+        "championPoints": "128,188",
+        "ChampionInfo": {
+          "Name": "Karma",
+          "Title": "the Enlightened One"
+        }
+      },
+      {
+        "championId": 12,
+        "championLevel": 7,
+        "championPoints": "93,612",
+        "ChampionInfo": {
+          "Name": "Alistar",
+          "Title": "the Minotaur"
+        }
+      }
+    ]
+  },
+  {
+    "leaguePoints": 1590,
+    "LadderRank": 5,
+    "summonerId": "yS0iAJ_Yd8YJhE6aCH-aU_miifY7Qy4EcowMhBAqr-NtZF0",
+    "SummonerInfo": {
+      "profileIconId": 3166,
+      "summonerLevel": 505,
+      "name": "Razørk Activoo"
+    },
+    "RankInfo": {
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "CHALLENGER",
+      "rank": "I"
+    },
+    "MasteryInfos": [
+      {
+        "championId": 64,
+        "championLevel": 7,
+        "championPoints": "672,029",
+        "ChampionInfo": {
+          "Name": "Lee Sin",
+          "Title": "the Blind Monk"
+        }
+      },
+      {
+        "championId": 79,
+        "championLevel": 7,
+        "championPoints": "277,783",
+        "ChampionInfo": {
+          "Name": "Gragas",
+          "Title": "the Rabble Rouser"
+        }
+      },
+      {
+        "championId": 245,
+        "championLevel": 7,
+        "championPoints": "260,190",
+        "ChampionInfo": {
+          "Name": "Ekko",
+          "Title": "the Boy Who Shattered Time"
+        }
+      },
+      {
+        "championId": 141,
+        "championLevel": 7,
+        "championPoints": "205,880",
+        "ChampionInfo": {
+          "Name": "Kayn",
+          "Title": "the Shadow Reaper"
+        }
+      },
+      {
+        "championId": 104,
+        "championLevel": 7,
+        "championPoints": "204,728",
+        "ChampionInfo": {
+          "Name": "Graves",
+          "Title": "the Outlaw"
+        }
+      }
+    ]
+  },
+  {
+    "leaguePoints": 1573,
+    "LadderRank": 6,
+    "summonerId": "HKFNK_WDsYUWdHhRU3otQ-xii_jHQVtGm99zWASBErBQTbhypes39mYgcQ",
+    "SummonerInfo": {
+      "profileIconId": 6,
+      "summonerLevel": 74,
+      "name": "Twitch Sinerias"
+    },
+    "RankInfo": {
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "CHALLENGER",
+      "rank": "I"
+    },
+    "MasteryInfos": [
+      {
+        "championId": 11,
+        "championLevel": 5,
+        "championPoints": "269,379",
+        "ChampionInfo": {
+          "Name": "Master Yi",
+          "Title": "the Wuju Bladesman"
+        }
+      },
+      {
+        "championId": 245,
+        "championLevel": 3,
+        "championPoints": "7,945",
+        "ChampionInfo": {
+          "Name": "Ekko",
+          "Title": "the Boy Who Shattered Time"
+        }
+      },
+      {
+        "championId": 141,
+        "championLevel": 2,
+        "championPoints": "5,649",
+        "ChampionInfo": {
+          "Name": "Kayn",
+          "Title": "the Shadow Reaper"
+        }
+      },
+      {
+        "championId": 56,
+        "championLevel": 2,
+        "championPoints": "4,187",
+        "ChampionInfo": {
+          "Name": "Nocturne",
+          "Title": "the Eternal Nightmare"
+        }
+      },
+      {
+        "championId": 427,
+        "championLevel": 2,
+        "championPoints": "3,533",
+        "ChampionInfo": {
+          "Name": "Ivern",
+          "Title": "the Green Father"
+        }
+      }
+    ]
+  },
+  {
+    "leaguePoints": 1570,
+    "LadderRank": 7,
+    "summonerId": "PqKkf6niEEFzww6JEOTxMNj2LslhSbwyr4pcQEDMswfXBJlcR0wNdKLHmQ",
+    "SummonerInfo": {
+      "profileIconId": 3798,
+      "summonerLevel": 63,
+      "name": "primeee21"
+    },
+    "RankInfo": {
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "CHALLENGER",
+      "rank": "I"
+    },
+    "MasteryInfos": [
+      {
+        "championId": 114,
+        "championLevel": 5,
+        "championPoints": "53,606",
+        "ChampionInfo": {
+          "Name": "Fiora",
+          "Title": "the Grand Duelist"
+        }
+      },
+      {
+        "championId": 39,
+        "championLevel": 5,
+        "championPoints": "26,746",
+        "ChampionInfo": {
+          "Name": "Irelia",
+          "Title": "the Blade Dancer"
+        }
+      },
+      {
+        "championId": 777,
+        "championLevel": 4,
+        "championPoints": "21,526",
+        "ChampionInfo": {
+          "Name": "Yone",
+          "Title": "the Unforgotten"
+        }
+      },
+      {
+        "championId": 24,
+        "championLevel": 4,
+        "championPoints": "20,828",
+        "ChampionInfo": {
+          "Name": "Jax",
+          "Title": "Grandmaster at Arms"
+        }
+      },
+      {
+        "championId": 164,
+        "championLevel": 4,
+        "championPoints": "17,722",
+        "ChampionInfo": {
+          "Name": "Camille",
+          "Title": "the Steel Shadow"
+        }
+      }
+    ]
+  },
+  {
+    "leaguePoints": 1536,
+    "LadderRank": 8,
     "summonerId": "OXPe9h7F_nc12U2pqI59u9RV0bSPfRnpRiTQurEEWT6OuiVT",
     "SummonerInfo": {
       "profileIconId": 4550,
-      "summonerLevel": 864,
+      "summonerLevel": 868,
       "name": "SUP Serin"
     },
     "RankInfo": {
@@ -513,7 +451,7 @@
       {
         "championId": 7,
         "championLevel": 5,
-        "championPoints": "291928",
+        "championPoints": "292,114",
         "ChampionInfo": {
           "Name": "LeBlanc",
           "Title": "the Deceiver"
@@ -522,7 +460,7 @@
       {
         "championId": 39,
         "championLevel": 5,
-        "championPoints": "282248",
+        "championPoints": "282,248",
         "ChampionInfo": {
           "Name": "Irelia",
           "Title": "the Blade Dancer"
@@ -531,7 +469,7 @@
       {
         "championId": 142,
         "championLevel": 5,
-        "championPoints": "218844",
+        "championPoints": "218,844",
         "ChampionInfo": {
           "Name": "Zoe",
           "Title": "the Aspect of Twilight"
@@ -540,7 +478,7 @@
       {
         "championId": 517,
         "championLevel": 5,
-        "championPoints": "217797",
+        "championPoints": "217,797",
         "ChampionInfo": {
           "Name": "Sylas",
           "Title": "the Unshackled"
@@ -549,7 +487,7 @@
       {
         "championId": 84,
         "championLevel": 5,
-        "championPoints": "205543",
+        "championPoints": "206,401",
         "ChampionInfo": {
           "Name": "Akali",
           "Title": "the Rogue Assassin"
@@ -558,136 +496,74 @@
     ]
   },
   {
+    "leaguePoints": 1530,
+    "LadderRank": 9,
+    "summonerId": "V7oP4c2vPq4yMh8dUn5XwRtXXnEwtarekfmOC-GvPnImhJPS5cQ-7VHplQ",
+    "SummonerInfo": {
+      "profileIconId": 6,
+      "summonerLevel": 137,
+      "name": "zyb"
+    },
+    "RankInfo": {
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "CHALLENGER",
+      "rank": "I"
+    },
+    "MasteryInfos": [
+      {
+        "championId": 104,
+        "championLevel": 5,
+        "championPoints": "53,961",
+        "ChampionInfo": {
+          "Name": "Graves",
+          "Title": "the Outlaw"
+        }
+      },
+      {
+        "championId": 360,
+        "championLevel": 7,
+        "championPoints": "49,679",
+        "ChampionInfo": {
+          "Name": "Samira",
+          "Title": "the Desert Rose"
+        }
+      },
+      {
+        "championId": 203,
+        "championLevel": 5,
+        "championPoints": "36,043",
+        "ChampionInfo": {
+          "Name": "Kindred",
+          "Title": "The Eternal Hunters"
+        }
+      },
+      {
+        "championId": 91,
+        "championLevel": 5,
+        "championPoints": "34,371",
+        "ChampionInfo": {
+          "Name": "Talon",
+          "Title": "the Blade's Shadow"
+        }
+      },
+      {
+        "championId": 62,
+        "championLevel": 5,
+        "championPoints": "27,169",
+        "ChampionInfo": {
+          "Name": "Wukong",
+          "Title": "the Monkey King"
+        }
+      }
+    ]
+  },
+  {
     "leaguePoints": 1509,
     "LadderRank": 10,
-    "summonerId": "9H6V0KBcUVhsD9Lofer8bVjgPbA9fMG1VP4nSSS-E-w3VK0",
-    "SummonerInfo": {
-      "profileIconId": 3458,
-      "summonerLevel": 859,
-      "name": "EL RONRONS"
-    },
-    "RankInfo": {
-      "queueType": "RANKED_SOLO_5x5",
-      "tier": "CHALLENGER",
-      "rank": "I"
-    },
-    "MasteryInfos": [
-      {
-        "championId": 114,
-        "championLevel": 7,
-        "championPoints": "848880",
-        "ChampionInfo": {
-          "Name": "Fiora",
-          "Title": "the Grand Duelist"
-        }
-      },
-      {
-        "championId": 164,
-        "championLevel": 7,
-        "championPoints": "688341",
-        "ChampionInfo": {
-          "Name": "Camille",
-          "Title": "the Steel Shadow"
-        }
-      },
-      {
-        "championId": 126,
-        "championLevel": 7,
-        "championPoints": "465135",
-        "ChampionInfo": {
-          "Name": "Jayce",
-          "Title": "the Defender of Tomorrow"
-        }
-      },
-      {
-        "championId": 41,
-        "championLevel": 7,
-        "championPoints": "450666",
-        "ChampionInfo": {
-          "Name": "Gangplank",
-          "Title": "the Saltwater Scourge"
-        }
-      },
-      {
-        "championId": 39,
-        "championLevel": 7,
-        "championPoints": "385434",
-        "ChampionInfo": {
-          "Name": "Irelia",
-          "Title": "the Blade Dancer"
-        }
-      }
-    ]
-  },
-  {
-    "leaguePoints": 1495,
-    "LadderRank": 11,
-    "summonerId": "GvUfymhQBGUqpocl_ilf9TbquXhTrbhgBIxJ6KsK6tceLp4CDZeFMFGA5w",
-    "SummonerInfo": {
-      "profileIconId": 29,
-      "summonerLevel": 90,
-      "name": "sanghyxxn"
-    },
-    "RankInfo": {
-      "queueType": "RANKED_SOLO_5x5",
-      "tier": "CHALLENGER",
-      "rank": "I"
-    },
-    "MasteryInfos": [
-      {
-        "championId": 22,
-        "championLevel": 5,
-        "championPoints": "44740",
-        "ChampionInfo": {
-          "Name": "Ashe",
-          "Title": "the Frost Archer"
-        }
-      },
-      {
-        "championId": 110,
-        "championLevel": 5,
-        "championPoints": "32255",
-        "ChampionInfo": {
-          "Name": "Varus",
-          "Title": "the Arrow of Retribution"
-        }
-      },
-      {
-        "championId": 236,
-        "championLevel": 5,
-        "championPoints": "22841",
-        "ChampionInfo": {
-          "Name": "Lucian",
-          "Title": "the Purifier"
-        }
-      },
-      {
-        "championId": 432,
-        "championLevel": 4,
-        "championPoints": "15899",
-        "ChampionInfo": {
-          "Name": "Bard",
-          "Title": "the Wandering Caretaker"
-        }
-      },
-      {
-        "championId": 555,
-        "championLevel": 4,
-        "championPoints": "15686",
-        "ChampionInfo": {
-          "Name": "Pyke",
-          "Title": "the Bloodharbor Ripper"
-        }
-      }
-    ]
-  },
-  {
-    "leaguePoints": 1468,
-    "LadderRank": 12,
     "summonerId": "iono8wSe4EQ3Gu133p_owX-fHA1nD1l6ILf_mLR3nVvux0Q",
     "SummonerInfo": {
       "profileIconId": 4021,
-      "summonerLevel": 993,
+      "summonerLevel": 994,
       "name": "supaaaaaaaaaaaaa"
     },
     "RankInfo": {
@@ -699,7 +575,7 @@
       {
         "championId": 145,
         "championLevel": 7,
-        "championPoints": "865079",
+        "championPoints": "865,986",
         "ChampionInfo": {
           "Name": "Kai'Sa",
           "Title": "Daughter of the Void"
@@ -708,7 +584,7 @@
       {
         "championId": 81,
         "championLevel": 7,
-        "championPoints": "622821",
+        "championPoints": "622,821",
         "ChampionInfo": {
           "Name": "Ezreal",
           "Title": "the Prodigal Explorer"
@@ -717,7 +593,7 @@
       {
         "championId": 18,
         "championLevel": 7,
-        "championPoints": "608047",
+        "championPoints": "608,047",
         "ChampionInfo": {
           "Name": "Tristana",
           "Title": "the Yordle Gunner"
@@ -726,7 +602,7 @@
       {
         "championId": 236,
         "championLevel": 7,
-        "championPoints": "520640",
+        "championPoints": "520,640",
         "ChampionInfo": {
           "Name": "Lucian",
           "Title": "the Purifier"
@@ -735,7 +611,7 @@
       {
         "championId": 429,
         "championLevel": 7,
-        "championPoints": "479644",
+        "championPoints": "479,644",
         "ChampionInfo": {
           "Name": "Kalista",
           "Title": "the Spear of Vengeance"
@@ -744,13 +620,13 @@
     ]
   },
   {
-    "leaguePoints": 1459,
-    "LadderRank": 13,
-    "summonerId": "Qnl_JzfaAiKsYI8AlhIJZ7QwlvWrNId59VTYUwjy9CnbXkI",
+    "leaguePoints": 1483,
+    "LadderRank": 11,
+    "summonerId": "9H6V0KBcUVhsD9Lofer8bVjgPbA9fMG1VP4nSSS-E-w3VK0",
     "SummonerInfo": {
-      "profileIconId": 907,
-      "summonerLevel": 644,
-      "name": "BDS xMatty"
+      "profileIconId": 3458,
+      "summonerLevel": 860,
+      "name": "EL RONRONS"
     },
     "RankInfo": {
       "queueType": "RANKED_SOLO_5x5",
@@ -759,121 +635,59 @@
     },
     "MasteryInfos": [
       {
-        "championId": 236,
+        "championId": 114,
         "championLevel": 7,
-        "championPoints": "575651",
+        "championPoints": "848,880",
         "ChampionInfo": {
-          "Name": "Lucian",
-          "Title": "the Purifier"
+          "Name": "Fiora",
+          "Title": "the Grand Duelist"
         }
       },
       {
-        "championId": 81,
+        "championId": 164,
         "championLevel": 7,
-        "championPoints": "559549",
+        "championPoints": "688,341",
         "ChampionInfo": {
-          "Name": "Ezreal",
-          "Title": "the Prodigal Explorer"
+          "Name": "Camille",
+          "Title": "the Steel Shadow"
         }
       },
       {
-        "championId": 498,
+        "championId": 126,
         "championLevel": 7,
-        "championPoints": "324334",
+        "championPoints": "465,724",
         "ChampionInfo": {
-          "Name": "Xayah",
-          "Title": "the Rebel"
+          "Name": "Jayce",
+          "Title": "the Defender of Tomorrow"
         }
       },
       {
-        "championId": 145,
+        "championId": 41,
         "championLevel": 7,
-        "championPoints": "319812",
+        "championPoints": "450,666",
         "ChampionInfo": {
-          "Name": "Kai'Sa",
-          "Title": "Daughter of the Void"
+          "Name": "Gangplank",
+          "Title": "the Saltwater Scourge"
         }
       },
       {
-        "championId": 67,
+        "championId": 39,
         "championLevel": 7,
-        "championPoints": "317010",
+        "championPoints": "385,434",
         "ChampionInfo": {
-          "Name": "Vayne",
-          "Title": "the Night Hunter"
+          "Name": "Irelia",
+          "Title": "the Blade Dancer"
         }
       }
     ]
   },
   {
-    "leaguePoints": 1451,
-    "LadderRank": 14,
-    "summonerId": "LLJICsa0PvIFvzYSwmNTRJmZi7a0t2ypIB2s6E0AcGV66bg",
-    "SummonerInfo": {
-      "profileIconId": 774,
-      "summonerLevel": 140,
-      "name": "LiL Timothy"
-    },
-    "RankInfo": {
-      "queueType": "RANKED_SOLO_5x5",
-      "tier": "CHALLENGER",
-      "rank": "I"
-    },
-    "MasteryInfos": [
-      {
-        "championId": 119,
-        "championLevel": 7,
-        "championPoints": "178564",
-        "ChampionInfo": {
-          "Name": "Draven",
-          "Title": "the Glorious Executioner"
-        }
-      },
-      {
-        "championId": 202,
-        "championLevel": 7,
-        "championPoints": "173898",
-        "ChampionInfo": {
-          "Name": "Jhin",
-          "Title": "the Virtuoso"
-        }
-      },
-      {
-        "championId": 429,
-        "championLevel": 7,
-        "championPoints": "168298",
-        "ChampionInfo": {
-          "Name": "Kalista",
-          "Title": "the Spear of Vengeance"
-        }
-      },
-      {
-        "championId": 81,
-        "championLevel": 7,
-        "championPoints": "126109",
-        "ChampionInfo": {
-          "Name": "Ezreal",
-          "Title": "the Prodigal Explorer"
-        }
-      },
-      {
-        "championId": 51,
-        "championLevel": 6,
-        "championPoints": "123407",
-        "ChampionInfo": {
-          "Name": "Caitlyn",
-          "Title": "the Sheriff of Piltover"
-        }
-      }
-    ]
-  },
-  {
-    "leaguePoints": 1430,
-    "LadderRank": 15,
+    "leaguePoints": 1468,
+    "LadderRank": 12,
     "summonerId": "bcLME08i3xoti2S_tTMbWq81oPQ_NNEMKFjOmpFSxQz7tlU",
     "SummonerInfo": {
       "profileIconId": 4353,
-      "summonerLevel": 502,
+      "summonerLevel": 504,
       "name": "Badlulu fan"
     },
     "RankInfo": {
@@ -885,7 +699,7 @@
       {
         "championId": 76,
         "championLevel": 7,
-        "championPoints": "673691",
+        "championPoints": "674,470",
         "ChampionInfo": {
           "Name": "Nidalee",
           "Title": "the Bestial Huntress"
@@ -894,7 +708,7 @@
       {
         "championId": 64,
         "championLevel": 7,
-        "championPoints": "584041",
+        "championPoints": "585,702",
         "ChampionInfo": {
           "Name": "Lee Sin",
           "Title": "the Blind Monk"
@@ -903,7 +717,7 @@
       {
         "championId": 104,
         "championLevel": 7,
-        "championPoints": "487877",
+        "championPoints": "488,916",
         "ChampionInfo": {
           "Name": "Graves",
           "Title": "the Outlaw"
@@ -912,7 +726,7 @@
       {
         "championId": 121,
         "championLevel": 7,
-        "championPoints": "338443",
+        "championPoints": "338,443",
         "ChampionInfo": {
           "Name": "Kha'Zix",
           "Title": "the Voidreaver"
@@ -921,10 +735,196 @@
       {
         "championId": 60,
         "championLevel": 7,
-        "championPoints": "304976",
+        "championPoints": "305,930",
         "ChampionInfo": {
           "Name": "Elise",
           "Title": "the Spider Queen"
+        }
+      }
+    ]
+  },
+  {
+    "leaguePoints": 1461,
+    "LadderRank": 13,
+    "summonerId": "LLJICsa0PvIFvzYSwmNTRJmZi7a0t2ypIB2s6E0AcGV66bg",
+    "SummonerInfo": {
+      "profileIconId": 8,
+      "summonerLevel": 141,
+      "name": "bigboynumbers"
+    },
+    "RankInfo": {
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "CHALLENGER",
+      "rank": "I"
+    },
+    "MasteryInfos": [
+      {
+        "championId": 119,
+        "championLevel": 7,
+        "championPoints": "178,564",
+        "ChampionInfo": {
+          "Name": "Draven",
+          "Title": "the Glorious Executioner"
+        }
+      },
+      {
+        "championId": 202,
+        "championLevel": 7,
+        "championPoints": "173,898",
+        "ChampionInfo": {
+          "Name": "Jhin",
+          "Title": "the Virtuoso"
+        }
+      },
+      {
+        "championId": 429,
+        "championLevel": 7,
+        "championPoints": "168,298",
+        "ChampionInfo": {
+          "Name": "Kalista",
+          "Title": "the Spear of Vengeance"
+        }
+      },
+      {
+        "championId": 81,
+        "championLevel": 7,
+        "championPoints": "126,109",
+        "ChampionInfo": {
+          "Name": "Ezreal",
+          "Title": "the Prodigal Explorer"
+        }
+      },
+      {
+        "championId": 51,
+        "championLevel": 6,
+        "championPoints": "123,407",
+        "ChampionInfo": {
+          "Name": "Caitlyn",
+          "Title": "the Sheriff of Piltover"
+        }
+      }
+    ]
+  },
+  {
+    "leaguePoints": 1434,
+    "LadderRank": 14,
+    "summonerId": "Qnl_JzfaAiKsYI8AlhIJZ7QwlvWrNId59VTYUwjy9CnbXkI",
+    "SummonerInfo": {
+      "profileIconId": 907,
+      "summonerLevel": 645,
+      "name": "BDS xMatty"
+    },
+    "RankInfo": {
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "CHALLENGER",
+      "rank": "I"
+    },
+    "MasteryInfos": [
+      {
+        "championId": 236,
+        "championLevel": 7,
+        "championPoints": "575,651",
+        "ChampionInfo": {
+          "Name": "Lucian",
+          "Title": "the Purifier"
+        }
+      },
+      {
+        "championId": 81,
+        "championLevel": 7,
+        "championPoints": "559,549",
+        "ChampionInfo": {
+          "Name": "Ezreal",
+          "Title": "the Prodigal Explorer"
+        }
+      },
+      {
+        "championId": 498,
+        "championLevel": 7,
+        "championPoints": "324,334",
+        "ChampionInfo": {
+          "Name": "Xayah",
+          "Title": "the Rebel"
+        }
+      },
+      {
+        "championId": 145,
+        "championLevel": 7,
+        "championPoints": "319,812",
+        "ChampionInfo": {
+          "Name": "Kai'Sa",
+          "Title": "Daughter of the Void"
+        }
+      },
+      {
+        "championId": 67,
+        "championLevel": 7,
+        "championPoints": "317,010",
+        "ChampionInfo": {
+          "Name": "Vayne",
+          "Title": "the Night Hunter"
+        }
+      }
+    ]
+  },
+  {
+    "leaguePoints": 1432,
+    "LadderRank": 15,
+    "summonerId": "T8Ay1TaHxB-Gmb79_zNip__-jEvz5tILZ9zWZYv0gIBB5Cs",
+    "SummonerInfo": {
+      "profileIconId": 4353,
+      "summonerLevel": 849,
+      "name": "Agurin"
+    },
+    "RankInfo": {
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "CHALLENGER",
+      "rank": "I"
+    },
+    "MasteryInfos": [
+      {
+        "championId": 121,
+        "championLevel": 7,
+        "championPoints": "1,558,523",
+        "ChampionInfo": {
+          "Name": "Kha'Zix",
+          "Title": "the Voidreaver"
+        }
+      },
+      {
+        "championId": 60,
+        "championLevel": 7,
+        "championPoints": "1,493,950",
+        "ChampionInfo": {
+          "Name": "Elise",
+          "Title": "the Spider Queen"
+        }
+      },
+      {
+        "championId": 59,
+        "championLevel": 7,
+        "championPoints": "1,085,043",
+        "ChampionInfo": {
+          "Name": "Jarvan IV",
+          "Title": "the Exemplar of Demacia"
+        }
+      },
+      {
+        "championId": 102,
+        "championLevel": 7,
+        "championPoints": "521,774",
+        "ChampionInfo": {
+          "Name": "Shyvana",
+          "Title": "the Half-Dragon"
+        }
+      },
+      {
+        "championId": 28,
+        "championLevel": 7,
+        "championPoints": "449,167",
+        "ChampionInfo": {
+          "Name": "Evelynn",
+          "Title": "Agony's Embrace"
         }
       }
     ]

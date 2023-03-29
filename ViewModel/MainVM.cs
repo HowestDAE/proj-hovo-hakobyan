@@ -1,19 +1,18 @@
 ﻿using _2DAE15_HovhannesHakobyan_Exam.Model;
+using _2DAE15_HovhannesHakobyan_Exam.Repository;
 using _2DAE15_HovhannesHakobyan_Exam.View;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
+
 
 namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
 {
-    public class MainVM :ObservableObject
+    public class MainVM : ObservableObject
     {
         public Page CurrentPage { get; set; }
+        ValidationPage ValidationPage { get; set; }
         OverviewPage OverviewPage { get; set; }
         DetailsPage DetailsPage { get; set; }
         MenuPage MenuPage { get; set; }
@@ -21,12 +20,48 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
 
         public MainVM()
         {
-            OverviewPage = new OverviewPage();
+            ValidationPage = new ValidationPage();
             DetailsPage = new DetailsPage();
             MenuPage = new MenuPage();
             SwitchToMainPageCommand = new RelayCommand(SwitchToMainPage);
+            CurrentPage = ValidationPage;
+
+           
+
+            //Get the MenuVM to subscribe to NavigateToPage
+            MenuVM menuVM = MenuPage.DataContext as MenuVM;
+            if (menuVM != null)
+            {
+                menuVM.NavigateToPage += MenuVM_NavigateToPage;
+            }
+
+            ValidationVM validationVM = ValidationPage.DataContext as ValidationVM;
+            if(validationVM != null)
+            {
+                validationVM.APIKeyApprovedEvent += ValidationVM_APIKeyApproved;
+            }
+        }
+        private void SwitchToMainPage()
+        {
             CurrentPage = MenuPage;
 
+            OnPropertyChanged(nameof(CurrentPage));
+        }
+
+        private void OverviewVM_ShowDetailsRequest(object sender, Summoner currentSummoner)
+        {
+            CurrentPage = DetailsPage;
+
+            (DetailsPage.DataContext as DetailsVM).CurrentSummoner = currentSummoner;
+
+            OnPropertyChanged(nameof(CurrentPage));
+        }
+
+        private void ValidationVM_APIKeyApproved(object sender, EventArgs eventArgs)
+        {
+            //Creating this page when API key is approves
+            //Guarantees that we send all the requests to RIOT API with a valid API key
+            OverviewPage = new OverviewPage();
             // Get the OverviewVM from the OverviewPage to subscribe to ShowDetails
             OverviewVM overviewVM = OverviewPage.DataContext as OverviewVM;
             if (overviewVM != null)
@@ -35,40 +70,24 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
                 overviewVM.ShowDetailsRequest += OverviewVM_ShowDetailsRequest;
             }
 
-            //Get the MenuVM to subscribe to NavigateToPage
-            MenuVM menuVM = MenuPage.DataContext as MenuVM;
-            if(menuVM != null)
-            {
-                menuVM.NavigateToPage += MenuVM_NavigateToPage;
-            }
-        }
-        private void SwitchToMainPage()
-        {
             CurrentPage = MenuPage;
-           
-            OnPropertyChanged(nameof(CurrentPage));
-        }
-
-        private void OverviewVM_ShowDetailsRequest(object sender, Summoner currentSummoner)
-        {
-            CurrentPage = DetailsPage;
-        
-            (DetailsPage.DataContext as DetailsVM).CurrentSummoner = currentSummoner;
 
             OnPropertyChanged(nameof(CurrentPage));
         }
 
         private void MenuVM_NavigateToPage(object sender, string page)
         {
-            if(page.Equals("leaderboard"))
+            if (page.Equals("leaderboard"))
             {
-                CurrentPage = OverviewPage; 
+                CurrentPage = OverviewPage;
                 OnPropertyChanged(nameof(CurrentPage));
             }
-            else if(page.Equals("search"))
+            else if (page.Equals("search"))
             {
 
             }
         }
+
+       
     }
 }

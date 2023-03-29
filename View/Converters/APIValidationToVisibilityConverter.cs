@@ -9,15 +9,16 @@ using System.Windows.Data;
 
 namespace _2DAE15_HovhannesHakobyan_Exam.View.Converters
 {
-    public class VisibilityToPageConverter : IValueConverter
+    public class APIValidationToVisibilityConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if(value is MenuPage || value is ValidationPage)
+
+            if (value is bool boolValue)
             {
-                return Visibility.Hidden;
+                return boolValue;
             }
-            return Visibility.Visible;
+            return null;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

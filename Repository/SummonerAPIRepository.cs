@@ -21,19 +21,18 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
     public class SummonerAPIRepository : ISummonerRepository
     {
         private List<TopSummoner> _topSummoners;
-        private string _apiKey = "RGAPI-f9eb28a9-7057-4dae-b3af-871d02b89cc7";
+        public static string APIKey = System.IO.File.ReadAllText("../../Resources/Data/apikey.txt");
         private int _nrTopPlayers = 15;
 
         //To avoid having Too Many Request exceptions
         private int _delayBetweenRequestsMs = 1000;
         private SemaphoreSlim _semaphore = new SemaphoreSlim(15,15);
 
-
         private async Task LoadTopSummonersAsync()
         {
             using (HttpClient client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Add("X-Riot-Token", _apiKey);
+                client.DefaultRequestHeaders.Add("X-Riot-Token", APIKey);
                 string endpoint = "https://euw1.api.riotgames.com/lol/league/v4/challengerleagues/by-queue/RANKED_SOLO_5x5";
 
                 try
@@ -85,7 +84,7 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
         {
             using (HttpClient client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Add("X-Riot-Token", _apiKey);
+                client.DefaultRequestHeaders.Add("X-Riot-Token", APIKey);
 
                 try
                 {
@@ -294,9 +293,26 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
                     throw ex;
                 }
             }
-           
-
+          
             return _topSummoners;
+        }
+
+        public async Task<Summoner> GetSummonerAsync(string name)
+        {
+            Summoner summoner = new Summoner();
+            summoner.SummonerInfo.Name = name;
+
+            try
+            {
+                await LoadSummonerInfoAsync(summoner);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Couldn't find the summoner");
+                throw ex;
+            }
+         
+            return summoner;
         }
     }
 }
