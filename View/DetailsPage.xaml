@@ -17,6 +17,7 @@
 
     <Page.Resources>
         <conv:UrlToImageConverter x:Key="UrlToImageConv" />
+        <conv:RankToImageConverter x:Key="RankToImageConv"/>
     </Page.Resources>
     <Grid>
 
@@ -57,12 +58,21 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.ColumnSpan="2">
-            <Image Source="{Binding CurrentSummoner.ProfileIconUrl, Converter={StaticResource UrlToImageConv}}" Width="100" Height="100" VerticalAlignment="top" Margin="0,20,0,0"/>
+            <Image Source="{Binding CurrentSummoner.ProfileIconUrl, Converter={StaticResource UrlToImageConv}}" Width="100" Height="100" VerticalAlignment="top" Margin="0,32,0,0"/>
             <TextBlock Text="{Binding CurrentSummoner.SummonerInfo.Name}" HorizontalAlignment="Center" Style="{StaticResource summonerNameStyle}"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Text="Lvl " TextWrapping="Wrap" Style="{StaticResource defaultStyle}"/>
                 <TextBlock Text="{Binding CurrentSummoner.SummonerInfo.Level}" TextWrapping="Wrap" Style="{StaticResource defaultStyle}"/>
             </StackPanel> 
+        </StackPanel>
+
+        <StackPanel Grid.Column="3" Grid.ColumnSpan="2">
+            <Image Source="{Binding CurrentSummoner.RankInfo.Tier, Converter={StaticResource RankToImageConv}}" Width="140" Height="110"  VerticalAlignment="top" Margin="0,20,0,0" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="{Binding CurrentSummoner.RankInfo.Tier}" TextWrapping="Wrap" Style="{StaticResource summonerNameStyle}"/>
+                <TextBlock Text=" " TextWrapping="Wrap"/>
+                <TextBlock Text="{Binding CurrentSummoner.RankInfo.Rank}" TextWrapping="Wrap" Style="{StaticResource summonerNameStyle}"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>
