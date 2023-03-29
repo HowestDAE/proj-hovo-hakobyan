@@ -4,18 +4,25 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:_2DAE15_HovhannesHakobyan_Exam.View"
+      xmlns:vm="clr-namespace:_2DAE15_HovhannesHakobyan_Exam.ViewModel"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MenuPage"
       Background="#31313C">
 
+
+    <Page.DataContext>
+        <vm:MenuVM/>
+    </Page.DataContext>
+
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <Button Width="200" Height="200" Background="Transparent" BorderBrush="Transparent">
+        <Button Width="200" Height="200" Background="Transparent" BorderBrush="Transparent" Command="{Binding ShowLeaderboardCommand}">
             <Image Source="../Resources/Icons/podium.png" />
         </Button>
 

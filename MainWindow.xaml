@@ -6,12 +6,20 @@
         xmlns:local="clr-namespace:_2DAE15_HovhannesHakobyan_Exam"
         xmlns:vm="clr-namespace:_2DAE15_HovhannesHakobyan_Exam.ViewModel"
         xmlns:view="clr-namespace:_2DAE15_HovhannesHakobyan_Exam.View"
+        xmlns:conv="clr-namespace:_2DAE15_HovhannesHakobyan_Exam.View.Converters"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Name="mainWindow">
+        Title="MainWindow" Height="450" Width="800" Name="mainWindow" MinHeight="400" MinWidth="600" MaxHeight="500" MaxWidth="900">
+
+    <Window.Resources>
+        <conv:VisibilityToPageConverter x:Key="VisibilityToPageConverter" />
+    </Window.Resources>
     <Grid>
         <Frame NavigationUIVisibility="Hidden" Content="{Binding CurrentPage}" />
+        <Button VerticalAlignment="Bottom" Command="{Binding SwitchToMainPageCommand}" Content="Back To Main Menu" Background="#5383E8" Foreground="White" FontSize="15"
+                Visibility="{Binding CurrentPage, Converter={StaticResource VisibilityToPageConverter}}"/>
     </Grid>
 
+    
     <Window.DataContext>
         <vm:MainVM />
     </Window.DataContext>

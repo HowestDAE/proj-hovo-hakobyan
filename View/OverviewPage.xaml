@@ -75,13 +75,12 @@
                             <Image Source="{Binding ProfileIconUrl, Converter={StaticResource UrlToImageConv}}" Width="30" Height="30" Margin="4" />
                             <TextBlock Style="{StaticResource summonerNameStyle}" Text="{Binding SummonerInfo.Name }"/>
                         </StackPanel>
-                      
+
                         <TextBlock Style="{StaticResource defaultStyle}" Text="{Binding LeaguePoints}" Grid.Column="2" Margin="27,0,0,0"/>
                         <Separator Grid.ColumnSpan="3" VerticalAlignment="Bottom" Background="#282830" />
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        
     </Grid>
 </Page>
