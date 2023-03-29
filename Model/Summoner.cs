@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace _2DAE15_HovhannesHakobyan_Exam.Model
@@ -69,8 +70,20 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Model
         [JsonProperty("championLevel")]
         public int ChampionLevel { get; set; }
 
+        private string _championPoints;
         [JsonProperty("championPoints")]
-        public string ChampionPoints { get; set; }
+        public string ChampionPoints
+        {
+            get 
+            {
+                int championPoints = int.Parse(_championPoints);
+                return championPoints.ToString("N0");
+            }
+            set
+            {
+                _championPoints = value;
+            }
+        }
 
         private ChampionInfo _champInfo = new ChampionInfo();
 
@@ -89,11 +102,19 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Model
         public string Title { get; set; }
 
         [JsonIgnore]
-        public string ProfileIconUrl
+        public string ChampionIconUrl
         {
             get
             {
-                return $"http://ddragon.leagueoflegends.com/cdn/13.6.1/img/champion/{Name}.png";
+                //This will work for most champion Names
+                //The way they built this endpoint is really inconsistent
+                //You are supposed to remove all the symbols from the name, e.g Kai'sa becomes Kaisa, Rek'sai becomes Reksai
+                //But some names, they use Pascal case, for example RekSai works, but Reksai doesn't work
+                //For some names they don't use Pascal case, for example Kaisa works, but KaiSa doesn't work
+                //And some champions are called by their nicknames, for example Wukong is MonkeyKing
+                //Some contain numbers in them
+                string correctName = Regex.Replace(Name, "[^a-zA-Z]+", "");
+                return $"http://ddragon.leagueoflegends.com/cdn/13.6.1/img/champion/{correctName}.png";
             }
         }
     }

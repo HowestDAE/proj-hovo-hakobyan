@@ -8,7 +8,7 @@
         xmlns:view="clr-namespace:_2DAE15_HovhannesHakobyan_Exam.View"
         xmlns:conv="clr-namespace:_2DAE15_HovhannesHakobyan_Exam.View.Converters"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800" Name="mainWindow" MinHeight="500" MinWidth="600" MaxHeight="600" MaxWidth="900">
+        Title="MainWindow" Height="520" Width="800" Name="mainWindow" MinHeight="520" MinWidth="700" MaxHeight="700" MaxWidth="900">
 
     <Window.Resources>
         <conv:VisibilityToPageConverter x:Key="VisibilityToPageConverter" />

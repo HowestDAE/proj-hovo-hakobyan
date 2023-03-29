@@ -93,6 +93,7 @@
     <Compile Include="ViewModel\MainVM.cs" />
     <Compile Include="ViewModel\MenuVM.cs" />
     <Compile Include="ViewModel\OverviewVM.cs" />
+    <Compile Include="View\Converters\MasteryToImageConverter.cs" />
     <Compile Include="View\Converters\RankToImageConverter.cs" />
     <Compile Include="View\Converters\UrlToImageConverter.cs" />
     <Compile Include="View\Converters\VisibilityToPageConverter.cs" />
@@ -183,6 +184,15 @@
     <Resource Include="Resources\RankedEmblem\wings\wings_master.png" />
     <Resource Include="Resources\RankedEmblem\wings\wings_platinum.png" />
     <Resource Include="Resources\RankedEmblem\wings\wings_silver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Masteries\mastery-1.png" />
+    <Resource Include="Resources\Masteries\mastery-2.png" />
+    <Resource Include="Resources\Masteries\mastery-3.png" />
+    <Resource Include="Resources\Masteries\mastery-4.png" />
+    <Resource Include="Resources\Masteries\mastery-5.png" />
+    <Resource Include="Resources\Masteries\mastery-6.png" />
+    <Resource Include="Resources\Masteries\mastery-7.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\CommunityToolkit.Mvvm.8.1.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets" Condition="Exists('packages\CommunityToolkit.Mvvm.8.1.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets')" />

@@ -18,6 +18,7 @@
     <Page.Resources>
         <conv:UrlToImageConverter x:Key="UrlToImageConv" />
         <conv:RankToImageConverter x:Key="RankToImageConv"/>
+        <conv:MasteryToImageConverter x:Key="MasteryToImageConv" />
     </Page.Resources>
     <Grid>
 
@@ -57,22 +58,105 @@
             <RowDefinition Height="1.5*"/>
         </Grid.RowDefinitions>
 
+        <Rectangle Grid.ColumnSpan="5" Margin="30,5" Fill="#1C1C1F"/>
+        <Rectangle Height="3" VerticalAlignment="Bottom" Grid.Column="1" Grid.ColumnSpan="3" Margin="5,0"  Fill="#FFB900" />
+                      
+        <!-- Summoner section-->
         <StackPanel Grid.ColumnSpan="2">
             <Image Source="{Binding CurrentSummoner.ProfileIconUrl, Converter={StaticResource UrlToImageConv}}" Width="100" Height="100" VerticalAlignment="top" Margin="0,32,0,0"/>
             <TextBlock Text="{Binding CurrentSummoner.SummonerInfo.Name}" HorizontalAlignment="Center" Style="{StaticResource summonerNameStyle}"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Text="Lvl " TextWrapping="Wrap" Style="{StaticResource defaultStyle}"/>
                 <TextBlock Text="{Binding CurrentSummoner.SummonerInfo.Level}" TextWrapping="Wrap" Style="{StaticResource defaultStyle}"/>
-            </StackPanel> 
+            </StackPanel>
+
         </StackPanel>
 
+        <!-- Rank section-->
         <StackPanel Grid.Column="3" Grid.ColumnSpan="2">
-            <Image Source="{Binding CurrentSummoner.RankInfo.Tier, Converter={StaticResource RankToImageConv}}" Width="140" Height="110"  VerticalAlignment="top" Margin="0,20,0,0" />
+            <Image Source="{Binding CurrentSummoner.RankInfo.Tier, Converter={StaticResource RankToImageConv}}" Width="140" Height="110"  VerticalAlignment="top" Margin="0,42,0,0" />
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Text="{Binding CurrentSummoner.RankInfo.Tier}" TextWrapping="Wrap" Style="{StaticResource summonerNameStyle}"/>
                 <TextBlock Text=" " TextWrapping="Wrap"/>
                 <TextBlock Text="{Binding CurrentSummoner.RankInfo.Rank}" TextWrapping="Wrap" Style="{StaticResource summonerNameStyle}"/>
             </StackPanel>
         </StackPanel>
+        
+        <!-- Mastery section, 1-->
+        <StackPanel Grid.Row="1" VerticalAlignment="Bottom" Margin="0,0,0,85">
+            <Image Source="{Binding CurrentSummoner.MasteryInfos[0].ChampionLevel, Converter={StaticResource MasteryToImageConv}}" VerticalAlignment="Top"  Width="50" Height="50"/>
+            <Ellipse Width="100" Height="100" Stroke="Black" StrokeThickness="2">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="{Binding CurrentSummoner.MasteryInfos[0].ChampionInfo.ChampionIconUrl, Converter={StaticResource UrlToImageConv}}" Stretch="UniformToFill" />
+                </Ellipse.Fill>
+            </Ellipse>
+            <TextBlock Text="{Binding CurrentSummoner.MasteryInfos[0].ChampionInfo.Name}" Style="{StaticResource summonerNameStyle}" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="{Binding CurrentSummoner.MasteryInfos[0].ChampionPoints}"  Style="{StaticResource defaultStyle}" TextWrapping="Wrap"/>
+                <TextBlock Text=" pts"  Style="{StaticResource defaultStyle}" TextWrapping="Wrap"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Mastery section, 2-->
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,0,0,70" VerticalAlignment="Bottom">
+            <Image Source="{Binding CurrentSummoner.MasteryInfos[1].ChampionLevel, Converter={StaticResource MasteryToImageConv}}" VerticalAlignment="Top"  Width="50" Height="50"/>
+            <Ellipse Width="100" Height="100" Stroke="Black" StrokeThickness="2">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="{Binding CurrentSummoner.MasteryInfos[1].ChampionInfo.ChampionIconUrl, Converter={StaticResource UrlToImageConv}}" Stretch="UniformToFill" />
+                </Ellipse.Fill>
+            </Ellipse>
+            <TextBlock Text="{Binding CurrentSummoner.MasteryInfos[1].ChampionInfo.Name}" Style="{StaticResource summonerNameStyle}" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="{Binding CurrentSummoner.MasteryInfos[1].ChampionPoints}"  Style="{StaticResource defaultStyle}" TextWrapping="Wrap"/>
+                <TextBlock Text=" pts"  Style="{StaticResource defaultStyle}" TextWrapping="Wrap"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Mastery section, 3-->
+        <StackPanel Grid.Row="1" Grid.Column="2" Margin="0,0,0,60" VerticalAlignment="Bottom">
+            <Image Source="{Binding CurrentSummoner.MasteryInfos[2].ChampionLevel, Converter={StaticResource MasteryToImageConv}}" VerticalAlignment="Top"  Width="50" Height="50"/>
+            <Ellipse Width="100" Height="100" Stroke="Black" StrokeThickness="2">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="{Binding CurrentSummoner.MasteryInfos[2].ChampionInfo.ChampionIconUrl, Converter={StaticResource UrlToImageConv}}" Stretch="UniformToFill" />
+                </Ellipse.Fill>
+            </Ellipse>
+            <TextBlock Text="{Binding CurrentSummoner.MasteryInfos[2].ChampionInfo.Name}" Style="{StaticResource summonerNameStyle}" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="{Binding CurrentSummoner.MasteryInfos[2].ChampionPoints}"  Style="{StaticResource defaultStyle}" TextWrapping="Wrap"/>
+                <TextBlock Text=" pts"  Style="{StaticResource defaultStyle}" TextWrapping="Wrap"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Mastery section, 4-->
+        <StackPanel Grid.Row="1" Grid.Column="3" Margin="0,0,0,50" VerticalAlignment="Bottom">
+            <Image Source="{Binding CurrentSummoner.MasteryInfos[3].ChampionLevel, Converter={StaticResource MasteryToImageConv}}" VerticalAlignment="Top"  Width="50" Height="50"/>
+            <Ellipse Width="100" Height="100" Stroke="Black" StrokeThickness="2">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="{Binding CurrentSummoner.MasteryInfos[3].ChampionInfo.ChampionIconUrl, Converter={StaticResource UrlToImageConv}}" Stretch="UniformToFill" />
+                </Ellipse.Fill>
+            </Ellipse>
+            <TextBlock Text="{Binding CurrentSummoner.MasteryInfos[3].ChampionInfo.Name}" Style="{StaticResource summonerNameStyle}" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="{Binding CurrentSummoner.MasteryInfos[3].ChampionPoints}"  Style="{StaticResource defaultStyle}" TextWrapping="Wrap"/>
+                <TextBlock Text=" pts"  Style="{StaticResource defaultStyle}" TextWrapping="Wrap"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Mastery section, 5-->
+        <StackPanel Grid.Row="1" Grid.Column="4" Margin="0,0,0,40" VerticalAlignment="Bottom">
+            <Image Source="{Binding CurrentSummoner.MasteryInfos[4].ChampionLevel, Converter={StaticResource MasteryToImageConv}}" VerticalAlignment="Top"  Width="50" Height="50"/>
+            <Ellipse Width="100" Height="100" Stroke="Black" StrokeThickness="2">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="{Binding CurrentSummoner.MasteryInfos[4].ChampionInfo.ChampionIconUrl, Converter={StaticResource UrlToImageConv}}" Stretch="UniformToFill" />
+                </Ellipse.Fill>
+            </Ellipse>
+            <TextBlock Text="{Binding CurrentSummoner.MasteryInfos[4].ChampionInfo.Name}" Style="{StaticResource summonerNameStyle}" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="{Binding CurrentSummoner.MasteryInfos[4].ChampionPoints}"  Style="{StaticResource defaultStyle}" TextWrapping="Wrap"/>
+                <TextBlock Text=" pts"  Style="{StaticResource defaultStyle}" TextWrapping="Wrap"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
+    
+    
 </Page>
