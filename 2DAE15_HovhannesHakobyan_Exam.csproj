@@ -91,12 +91,16 @@
     <Compile Include="Repository\SummonerLocalRepository.cs" />
     <Compile Include="ViewModel\DetailsVM.cs" />
     <Compile Include="ViewModel\MainVM.cs" />
+    <Compile Include="ViewModel\MenuVM.cs" />
     <Compile Include="ViewModel\OverviewVM.cs" />
     <Compile Include="View\Converters\RankToImageConverter.cs" />
     <Compile Include="View\Converters\UrlToImageConverter.cs" />
     <Compile Include="View\Converters\WingsToImageConverter.cs" />
     <Compile Include="View\DetailsPage.xaml.cs">
       <DependentUpon>DetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\OverviewPage.xaml.cs">
       <DependentUpon>OverviewPage.xaml</DependentUpon>
@@ -114,6 +118,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\DetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MenuPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -151,7 +159,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\Icons\podium.png" />
+    <Resource Include="Resources\Icons\search.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\RankedEmblem\emblem-bronze.png" />
     <Resource Include="Resources\RankedEmblem\emblem-challenger.png" />

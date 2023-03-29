@@ -13,17 +13,17 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
     public class MainVM :ObservableObject
     {
         public Page CurrentPage { get; set; }
-        public RelayCommand SwitchPageCommand { get; private set; }
         OverviewPage OverviewPage { get; set; }
         DetailsPage DetailsPage { get; set; }
+        MenuPage MenuPage { get; set; }
         
 
         public MainVM()
         {
-            SwitchPageCommand = new RelayCommand(SwitchPage);
             OverviewPage = new OverviewPage();
             DetailsPage = new DetailsPage();
-            CurrentPage = OverviewPage;
+            MenuPage = new MenuPage();
+            CurrentPage = MenuPage;
 
             // Get the OverviewVM from the OverviewPage to subscribe to ShowDetails
             OverviewVM overviewVM = OverviewPage.DataContext as OverviewVM;
@@ -32,11 +32,6 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
                 // Subscribe to the ShowDetailsRequested event
                 overviewVM.ShowDetailsRequest += OverviewVM_ShowDetailsRequest;
             }
-        }
-
-        private void SwitchPage()
-        {
-   
         }
 
         private void OverviewVM_ShowDetailsRequest(object sender, EventArgs e)

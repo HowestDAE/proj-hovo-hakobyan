@@ -16,7 +16,6 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
         private ISummonerRepository _summonerRepository;
 
         private string _loadingText;
-        private TopSummoner selectedSummoner;
 
         public string LoadingText
         {
@@ -69,7 +68,7 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
                 TopSummoners = await _summonerRepository.GetTopSummonersAsync();
                 Console.WriteLine("Using API");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 _summonerRepository = new SummonerLocalRepository();
                 TopSummoners = await _summonerRepository.GetTopSummonersAsync();
@@ -77,14 +76,11 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
             }
 
             OnPropertyChanged(nameof(TopSummoners));
-
-
             LoadingText = string.Empty;
         }
 
         private void ShowDetail()
         {
-            Console.WriteLine("ShowDetail()");
             //Used to let the main vm know about this
             ShowDetailsRequest?.Invoke(this, EventArgs.Empty);
 
