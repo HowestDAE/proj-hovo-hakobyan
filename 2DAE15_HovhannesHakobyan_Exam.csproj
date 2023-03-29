@@ -40,6 +40,9 @@
     <Reference Include="CommunityToolkit.Mvvm, Version=8.1.0.0, Culture=neutral, PublicKeyToken=4aff67a105548ee2, processorArchitecture=MSIL">
       <HintPath>packages\CommunityToolkit.Mvvm.8.1.0\lib\netstandard2.0\CommunityToolkit.Mvvm.dll</HintPath>
     </Reference>
+    <Reference Include="FontAwesome.WPF, Version=4.7.0.37774, Culture=neutral, PublicKeyToken=0758b07a11a4f466, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.WPF.4.7.0.9\lib\net40\FontAwesome.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -100,10 +103,12 @@
     <Compile Include="ViewModel\MainVM.cs" />
     <Compile Include="ViewModel\MenuVM.cs" />
     <Compile Include="ViewModel\OverviewVM.cs" />
+    <Compile Include="ViewModel\SearchVM.cs" />
     <Compile Include="ViewModel\ValidationVM.cs" />
     <Compile Include="View\Converters\APIValidationToVisibilityConverter.cs" />
     <Compile Include="View\Converters\MasteryToImageConverter.cs" />
     <Compile Include="View\Converters\RankToImageConverter.cs" />
+    <Compile Include="View\Converters\SearchToLoadingVisibility.cs" />
     <Compile Include="View\Converters\UrlToImageConverter.cs" />
     <Compile Include="View\Converters\VisibilityToPageConverter.cs" />
     <Compile Include="View\Converters\WingsToImageConverter.cs" />
@@ -115,6 +120,9 @@
     </Compile>
     <Compile Include="View\OverviewPage.xaml.cs">
       <DependentUpon>OverviewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SearchPage.xaml.cs">
+      <DependentUpon>SearchPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ValidationPage.xaml.cs">
       <DependentUpon>ValidationPage.xaml</DependentUpon>
@@ -140,6 +148,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\OverviewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SearchPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -191,15 +203,6 @@
     <Resource Include="Resources\RankedEmblem\emblem-master.png" />
     <Resource Include="Resources\RankedEmblem\emblem-platinum.png" />
     <Resource Include="Resources\RankedEmblem\emblem-silver.png" />
-    <Resource Include="Resources\RankedEmblem\wings\wings_bronze.png" />
-    <Resource Include="Resources\RankedEmblem\wings\wings_challenger.png" />
-    <Resource Include="Resources\RankedEmblem\wings\wings_diamond.png" />
-    <Resource Include="Resources\RankedEmblem\wings\wings_gold.png" />
-    <Resource Include="Resources\RankedEmblem\wings\wings_grandmaster.png" />
-    <Resource Include="Resources\RankedEmblem\wings\wings_iron.png" />
-    <Resource Include="Resources\RankedEmblem\wings\wings_master.png" />
-    <Resource Include="Resources\RankedEmblem\wings\wings_platinum.png" />
-    <Resource Include="Resources\RankedEmblem\wings\wings_silver.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Masteries\mastery-1.png" />

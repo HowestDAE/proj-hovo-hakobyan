@@ -28,6 +28,14 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Model
         }
 
         public List<MasteryInfo> MasteryInfos { get; set; }
+
+        public Summoner()
+        {
+            Id = string.Empty;
+            SummonerInfo = new SummonerInfo();
+            RankInfo = new RankInfo();
+            MasteryInfos = new List<MasteryInfo>();
+        }
     }
 
     public class TopSummoner : Summoner

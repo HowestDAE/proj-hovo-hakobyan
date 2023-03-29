@@ -16,6 +16,7 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
         OverviewPage OverviewPage { get; set; }
         DetailsPage DetailsPage { get; set; }
         MenuPage MenuPage { get; set; }
+        SearchPage SearchPage { get; set; }
         public RelayCommand SwitchToMainPageCommand { get; private set; }
 
         public MainVM()
@@ -23,10 +24,15 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
             ValidationPage = new ValidationPage();
             DetailsPage = new DetailsPage();
             MenuPage = new MenuPage();
+            SearchPage = new SearchPage();
             SwitchToMainPageCommand = new RelayCommand(SwitchToMainPage);
             CurrentPage = ValidationPage;
 
-           
+           SearchVM searchVM = SearchPage.DataContext as SearchVM;
+            if (searchVM != null)
+            {
+                searchVM.ShowDetailsRequest += ShowDetailsRequest;
+            }
 
             //Get the MenuVM to subscribe to NavigateToPage
             MenuVM menuVM = MenuPage.DataContext as MenuVM;
@@ -48,7 +54,7 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
             OnPropertyChanged(nameof(CurrentPage));
         }
 
-        private void OverviewVM_ShowDetailsRequest(object sender, Summoner currentSummoner)
+        private void ShowDetailsRequest(object sender, Summoner currentSummoner)
         {
             CurrentPage = DetailsPage;
 
@@ -67,7 +73,7 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
             if (overviewVM != null)
             {
                 // Subscribe to the ShowDetailsRequested event
-                overviewVM.ShowDetailsRequest += OverviewVM_ShowDetailsRequest;
+                overviewVM.ShowDetailsRequest += ShowDetailsRequest;
             }
 
             CurrentPage = MenuPage;
@@ -84,7 +90,8 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
             }
             else if (page.Equals("search"))
             {
-
+                CurrentPage = SearchPage;
+                OnPropertyChanged(nameof(CurrentPage));
             }
         }
 

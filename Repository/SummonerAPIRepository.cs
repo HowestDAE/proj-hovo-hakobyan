@@ -88,11 +88,19 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
 
                 try
                 {
+                    //This call will make sure we have the SummonerID for the other calls
+                    await LoadSummonerV4Async(outSummoner, client);
+
+
+                    //These calls need the summonerID
                     await Task.WhenAll(
-                    LoadLeagueV4EntriesAsync(outSummoner, client),
-                    LoadSummonerV4Async(outSummoner, client),
+                    LoadLeagueV4EntriesAsync(outSummoner, client),                 
                     LoadChampionMasteryV4Async(outSummoner, client)
                    );
+
+                    //Important
+                    //Can only be executre after the above endpoint calls are made
+                    await LoadChampionInfoAsync(outSummoner, client);
                 }
                 catch (Exception ex)
                 {
@@ -101,9 +109,7 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
                
                
 
-                //Important
-                //Can only be executre after the above endpoint calls are made
-                await LoadChampionInfoAsync(outSummoner, client);
+               
             }
         }
 
@@ -172,7 +178,9 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
                 }
 
                 string json = await response.Content.ReadAsStringAsync();
+                JObject summonerObject = JObject.Parse(json);
                 outSummoner.SummonerInfo = JsonConvert.DeserializeObject<SummonerInfo>(json);
+                outSummoner.Id = (string)summonerObject["id"];
             }
             catch (Exception ex)
             {
@@ -300,6 +308,7 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
         public async Task<Summoner> GetSummonerAsync(string name)
         {
             Summoner summoner = new Summoner();
+            summoner.Id = null;
             summoner.SummonerInfo.Name = name;
 
             try
