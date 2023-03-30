@@ -62,7 +62,7 @@
     ]
   },
   {
-    "leaguePoints": 1726,
+    "leaguePoints": 1702,
     "LadderRank": 2,
     "summonerId": "faWRC3PiqVZmrbAt5J0fjYMaMSr6s1LVnilbQK0o5rJ5Z7xN",
     "SummonerInfo": {
@@ -372,13 +372,13 @@
     ]
   },
   {
-    "leaguePoints": 1563,
+    "leaguePoints": 1568,
     "LadderRank": 7,
-    "summonerId": "6Niz1763cIBdqfkpjfBioCUsAa3LZNF6-_FkKPRnNZJbQcs",
+    "summonerId": "OXPe9h7F_nc12U2pqI59u9RV0bSPfRnpRiTQurEEWT6OuiVT",
     "SummonerInfo": {
-      "profileIconId": 3582,
-      "summonerLevel": 427,
-      "name": "Thumbs Down"
+      "profileIconId": 4550,
+      "summonerLevel": 869,
+      "name": "SUP Serin"
     },
     "RankInfo": {
       "queueType": "RANKED_SOLO_5x5",
@@ -387,48 +387,48 @@
     },
     "MasteryInfos": [
       {
-        "championId": 555,
-        "championLevel": 7,
-        "championPoints": "422,199",
+        "championId": 7,
+        "championLevel": 5,
+        "championPoints": "292,114",
         "ChampionInfo": {
-          "Name": "Pyke",
-          "Title": "the Bloodharbor Ripper"
+          "Name": "LeBlanc",
+          "Title": "the Deceiver"
         }
       },
       {
-        "championId": 412,
-        "championLevel": 7,
-        "championPoints": "363,415",
+        "championId": 39,
+        "championLevel": 5,
+        "championPoints": "282,248",
         "ChampionInfo": {
-          "Name": "Thresh",
-          "Title": "the Chain Warden"
+          "Name": "Irelia",
+          "Title": "the Blade Dancer"
         }
       },
       {
-        "championId": 111,
-        "championLevel": 7,
-        "championPoints": "190,399",
+        "championId": 142,
+        "championLevel": 5,
+        "championPoints": "218,844",
         "ChampionInfo": {
-          "Name": "Nautilus",
-          "Title": "the Titan of the Depths"
+          "Name": "Zoe",
+          "Title": "the Aspect of Twilight"
         }
       },
       {
-        "championId": 43,
-        "championLevel": 7,
-        "championPoints": "128,188",
+        "championId": 517,
+        "championLevel": 5,
+        "championPoints": "217,797",
         "ChampionInfo": {
-          "Name": "Karma",
-          "Title": "the Enlightened One"
+          "Name": "Sylas",
+          "Title": "the Unshackled"
         }
       },
       {
-        "championId": 12,
-        "championLevel": 7,
-        "championPoints": "93,612",
+        "championId": 84,
+        "championLevel": 5,
+        "championPoints": "206,401",
         "ChampionInfo": {
-          "Name": "Alistar",
-          "Title": "the Minotaur"
+          "Name": "Akali",
+          "Title": "the Rogue Assassin"
         }
       }
     ]
@@ -496,13 +496,13 @@
     ]
   },
   {
-    "leaguePoints": 1546,
+    "leaguePoints": 1538,
     "LadderRank": 9,
-    "summonerId": "OXPe9h7F_nc12U2pqI59u9RV0bSPfRnpRiTQurEEWT6OuiVT",
+    "summonerId": "6Niz1763cIBdqfkpjfBioCUsAa3LZNF6-_FkKPRnNZJbQcs",
     "SummonerInfo": {
-      "profileIconId": 4550,
-      "summonerLevel": 868,
-      "name": "SUP Serin"
+      "profileIconId": 3582,
+      "summonerLevel": 427,
+      "name": "Thumbs Down"
     },
     "RankInfo": {
       "queueType": "RANKED_SOLO_5x5",
@@ -511,48 +511,48 @@
     },
     "MasteryInfos": [
       {
-        "championId": 7,
-        "championLevel": 5,
-        "championPoints": "292,114",
+        "championId": 555,
+        "championLevel": 7,
+        "championPoints": "422,199",
         "ChampionInfo": {
-          "Name": "LeBlanc",
-          "Title": "the Deceiver"
+          "Name": "Pyke",
+          "Title": "the Bloodharbor Ripper"
         }
       },
       {
-        "championId": 39,
-        "championLevel": 5,
-        "championPoints": "282,248",
+        "championId": 412,
+        "championLevel": 7,
+        "championPoints": "363,415",
         "ChampionInfo": {
-          "Name": "Irelia",
-          "Title": "the Blade Dancer"
+          "Name": "Thresh",
+          "Title": "the Chain Warden"
         }
       },
       {
-        "championId": 142,
-        "championLevel": 5,
-        "championPoints": "218,844",
+        "championId": 111,
+        "championLevel": 7,
+        "championPoints": "190,399",
         "ChampionInfo": {
-          "Name": "Zoe",
-          "Title": "the Aspect of Twilight"
+          "Name": "Nautilus",
+          "Title": "the Titan of the Depths"
         }
       },
       {
-        "championId": 517,
-        "championLevel": 5,
-        "championPoints": "217,797",
+        "championId": 43,
+        "championLevel": 7,
+        "championPoints": "128,188",
         "ChampionInfo": {
-          "Name": "Sylas",
-          "Title": "the Unshackled"
+          "Name": "Karma",
+          "Title": "the Enlightened One"
         }
       },
       {
-        "championId": 84,
-        "championLevel": 5,
-        "championPoints": "206,401",
+        "championId": 12,
+        "championLevel": 7,
+        "championPoints": "93,612",
         "ChampionInfo": {
-          "Name": "Akali",
-          "Title": "the Rogue Assassin"
+          "Name": "Alistar",
+          "Title": "the Minotaur"
         }
       }
     ]
