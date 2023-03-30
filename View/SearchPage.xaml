@@ -20,11 +20,31 @@
     </Page.Resources>
 
     <Grid>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <fa:ImageAwesome Icon="Refresh" Spin="True" Height="48" Width="48" Margin="0,0,15,0" Foreground="Wheat" Visibility="{Binding IsLoading, Converter={StaticResource SearchToLoadingConv}}"/>
-            <TextBox Background="#1C1C1F" Width="300" Height="30" Text="{Binding SearchedName}" Foreground="White" VerticalAlignment="Center"/>
-            <Button Content="Search" Margin="15,0,0,0" Width="100" Background="#5383E8" Foreground="White" FontSize="15" Command="{Binding LookForSummonerCommand}" />
+        <Grid.Resources>
+            <!-- Default text style -->
+            <Style x:Key="defaultStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property ="Foreground" Value="#7B7A8E"/>
+            </Style>
+        </Grid.Resources>
+        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="{Binding StatusMessage}" Style="{StaticResource defaultStyle}" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <fa:ImageAwesome Icon="Refresh" Spin="True" Height="48" Width="48" Margin="0,0,15,0" Foreground="Wheat" Visibility="{Binding IsLoading, Converter={StaticResource SearchToLoadingConv}}"/>
+                <TextBox Background="#1C1C1F" Width="300" Height="30" Text="{Binding SearchedName}" Foreground="White" VerticalAlignment="Center"/>
+                <Button Content="Search" Margin="15,0,0,0" Width="100" Background="#5383E8" Foreground="White" FontSize="15" Command="{Binding LookForSummonerCommand}" />
+            </StackPanel>
+            <TextBlock Width="300" Margin="0,0,50,0" Text="Recent" Style="{StaticResource defaultStyle}" HorizontalAlignment="Center" Background="#1C1C1F"/>
+            <ListBox ItemsSource="{Binding SearchHistory}" Width="300" Margin="0,0,50,0" SelectedItem="{Binding SelectedName}" Background="#1C1C1F">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" Style="{StaticResource defaultStyle}" HorizontalAlignment="Left" Margin="10,2,0,2"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </StackPanel>
+        
        
     </Grid>
 </Page>

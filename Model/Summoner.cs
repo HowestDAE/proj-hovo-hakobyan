@@ -84,8 +84,15 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Model
         {
             get 
             {
-                int championPoints = int.Parse(_championPoints);
-                return championPoints.ToString("N0");
+                int championPoints = 0;
+                bool canParse = int.TryParse(_championPoints, out championPoints);
+                if (canParse)
+                {
+                    return championPoints.ToString("N0");
+                }
+
+                return _championPoints;
+
             }
             set
             {
