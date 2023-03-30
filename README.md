@@ -18,16 +18,24 @@ If the key is not valid, then I use a bot that automatically takes the user up t
 
 **Note:** After generating a new key, wait a couple of minutes until the key is active.
 
+![](https://media.giphy.com/media/cJZkd3kqrsOyvOBtmH/giphy.gif)
+
 ## Menu page
 This page gives you the option to go to Leaderboards page or Search page
+
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjJiOGM0N2VjZDhmZDlkODA4MjVmZWIxMDQxYmM3NTk3OGI4ZjEwZCZjdD1n/oU4S1xZ6V1UESCh1r3/giphy.gif)
 
 ## Leaderboard page
 Here I show the top 15 League of Legends players in Europe West. I try to do this using the API first, but since there are limits, doing too many calls can cause issues. To solve this I fallback on a local version of the data if i get a **BadResponse** from the API. If there are no issues, then I overwrite the local version so that it's up-to-date.
 
 Clicking on a player will take you to the Details page.
 
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGU4Y2YyYjRmYmRmNTEyZTc0NmI5MTk1ZGY2ODhlMTc4OGFhM2RhZiZjdD1n/JkCG8Au3Ds4wxGbHYD/giphy.gif)
+
 ## Details page
 This page provides more information about the chosen player. Summoner name, level, icon, top 5 masteries etc.
 
 ## Search page
 This page provides the functionality to look for players by their usernames in Europe West server. When the player is found, the details page will provide more information about this player. I also save the last 5 searches to show them as search history.
+
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2E5ZWU1ZmI0MzMwNDBiZmI4YmZmMjUyOWE1MTU2MDdhMjIyYzUxMCZjdD1n/mAn5RMOJL4bXQdIVza/giphy.gif)
