@@ -293,6 +293,8 @@ namespace _2DAE15_HovhannesHakobyan_Exam.Repository
                 try
                 {
                     await LoadTopSummonersAsync();
+
+                    //If we can read all the data that we need, only then will we update the local JSON
                     SerializeTopSummoners();
                 }
                 catch (Exception ex)

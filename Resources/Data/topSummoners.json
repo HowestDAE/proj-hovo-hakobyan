@@ -62,7 +62,7 @@
     ]
   },
   {
-    "leaguePoints": 1702,
+    "leaguePoints": 1727,
     "LadderRank": 2,
     "summonerId": "faWRC3PiqVZmrbAt5J0fjYMaMSr6s1LVnilbQK0o5rJ5Z7xN",
     "SummonerInfo": {
@@ -186,70 +186,8 @@
     ]
   },
   {
-    "leaguePoints": 1596,
-    "LadderRank": 4,
-    "summonerId": "PqKkf6niEEFzww6JEOTxMNj2LslhSbwyr4pcQEDMswfXBJlcR0wNdKLHmQ",
-    "SummonerInfo": {
-      "profileIconId": 3798,
-      "summonerLevel": 64,
-      "name": "primeee21"
-    },
-    "RankInfo": {
-      "queueType": "RANKED_SOLO_5x5",
-      "tier": "CHALLENGER",
-      "rank": "I"
-    },
-    "MasteryInfos": [
-      {
-        "championId": 114,
-        "championLevel": 5,
-        "championPoints": "53,606",
-        "ChampionInfo": {
-          "Name": "Fiora",
-          "Title": "the Grand Duelist"
-        }
-      },
-      {
-        "championId": 39,
-        "championLevel": 5,
-        "championPoints": "26,746",
-        "ChampionInfo": {
-          "Name": "Irelia",
-          "Title": "the Blade Dancer"
-        }
-      },
-      {
-        "championId": 24,
-        "championLevel": 5,
-        "championPoints": "21,800",
-        "ChampionInfo": {
-          "Name": "Jax",
-          "Title": "Grandmaster at Arms"
-        }
-      },
-      {
-        "championId": 777,
-        "championLevel": 4,
-        "championPoints": "21,526",
-        "ChampionInfo": {
-          "Name": "Yone",
-          "Title": "the Unforgotten"
-        }
-      },
-      {
-        "championId": 164,
-        "championLevel": 4,
-        "championPoints": "17,819",
-        "ChampionInfo": {
-          "Name": "Camille",
-          "Title": "the Steel Shadow"
-        }
-      }
-    ]
-  },
-  {
     "leaguePoints": 1590,
-    "LadderRank": 5,
+    "LadderRank": 4,
     "summonerId": "yS0iAJ_Yd8YJhE6aCH-aU_miifY7Qy4EcowMhBAqr-NtZF0",
     "SummonerInfo": {
       "profileIconId": 3166,
@@ -311,7 +249,7 @@
   },
   {
     "leaguePoints": 1573,
-    "LadderRank": 6,
+    "LadderRank": 5,
     "summonerId": "HKFNK_WDsYUWdHhRU3otQ-xii_jHQVtGm99zWASBErBQTbhypes39mYgcQ",
     "SummonerInfo": {
       "profileIconId": 6,
@@ -372,13 +310,13 @@
     ]
   },
   {
-    "leaguePoints": 1568,
-    "LadderRank": 7,
-    "summonerId": "OXPe9h7F_nc12U2pqI59u9RV0bSPfRnpRiTQurEEWT6OuiVT",
+    "leaguePoints": 1570,
+    "LadderRank": 6,
+    "summonerId": "PqKkf6niEEFzww6JEOTxMNj2LslhSbwyr4pcQEDMswfXBJlcR0wNdKLHmQ",
     "SummonerInfo": {
-      "profileIconId": 4550,
-      "summonerLevel": 869,
-      "name": "SUP Serin"
+      "profileIconId": 3798,
+      "summonerLevel": 64,
+      "name": "primeee21"
     },
     "RankInfo": {
       "queueType": "RANKED_SOLO_5x5",
@@ -387,55 +325,55 @@
     },
     "MasteryInfos": [
       {
-        "championId": 7,
+        "championId": 114,
         "championLevel": 5,
-        "championPoints": "292,114",
+        "championPoints": "53,731",
         "ChampionInfo": {
-          "Name": "LeBlanc",
-          "Title": "the Deceiver"
+          "Name": "Fiora",
+          "Title": "the Grand Duelist"
         }
       },
       {
         "championId": 39,
         "championLevel": 5,
-        "championPoints": "282,248",
+        "championPoints": "26,746",
         "ChampionInfo": {
           "Name": "Irelia",
           "Title": "the Blade Dancer"
         }
       },
       {
-        "championId": 142,
+        "championId": 24,
         "championLevel": 5,
-        "championPoints": "218,844",
+        "championPoints": "21,800",
         "ChampionInfo": {
-          "Name": "Zoe",
-          "Title": "the Aspect of Twilight"
+          "Name": "Jax",
+          "Title": "Grandmaster at Arms"
         }
       },
       {
-        "championId": 517,
-        "championLevel": 5,
-        "championPoints": "217,797",
+        "championId": 777,
+        "championLevel": 4,
+        "championPoints": "21,526",
         "ChampionInfo": {
-          "Name": "Sylas",
-          "Title": "the Unshackled"
+          "Name": "Yone",
+          "Title": "the Unforgotten"
         }
       },
       {
-        "championId": 84,
-        "championLevel": 5,
-        "championPoints": "206,401",
+        "championId": 164,
+        "championLevel": 4,
+        "championPoints": "17,819",
         "ChampionInfo": {
-          "Name": "Akali",
-          "Title": "the Rogue Assassin"
+          "Name": "Camille",
+          "Title": "the Steel Shadow"
         }
       }
     ]
   },
   {
     "leaguePoints": 1552,
-    "LadderRank": 8,
+    "LadderRank": 7,
     "summonerId": "V7oP4c2vPq4yMh8dUn5XwRtXXnEwtarekfmOC-GvPnImhJPS5cQ-7VHplQ",
     "SummonerInfo": {
       "profileIconId": 6,
@@ -497,7 +435,7 @@
   },
   {
     "leaguePoints": 1538,
-    "LadderRank": 9,
+    "LadderRank": 8,
     "summonerId": "6Niz1763cIBdqfkpjfBioCUsAa3LZNF6-_FkKPRnNZJbQcs",
     "SummonerInfo": {
       "profileIconId": 3582,
@@ -558,8 +496,132 @@
     ]
   },
   {
-    "leaguePoints": 1506,
+    "leaguePoints": 1538,
+    "LadderRank": 9,
+    "summonerId": "OXPe9h7F_nc12U2pqI59u9RV0bSPfRnpRiTQurEEWT6OuiVT",
+    "SummonerInfo": {
+      "profileIconId": 4550,
+      "summonerLevel": 869,
+      "name": "SUP Serin"
+    },
+    "RankInfo": {
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "CHALLENGER",
+      "rank": "I"
+    },
+    "MasteryInfos": [
+      {
+        "championId": 7,
+        "championLevel": 5,
+        "championPoints": "292,114",
+        "ChampionInfo": {
+          "Name": "LeBlanc",
+          "Title": "the Deceiver"
+        }
+      },
+      {
+        "championId": 39,
+        "championLevel": 5,
+        "championPoints": "282,248",
+        "ChampionInfo": {
+          "Name": "Irelia",
+          "Title": "the Blade Dancer"
+        }
+      },
+      {
+        "championId": 142,
+        "championLevel": 5,
+        "championPoints": "218,844",
+        "ChampionInfo": {
+          "Name": "Zoe",
+          "Title": "the Aspect of Twilight"
+        }
+      },
+      {
+        "championId": 517,
+        "championLevel": 5,
+        "championPoints": "217,797",
+        "ChampionInfo": {
+          "Name": "Sylas",
+          "Title": "the Unshackled"
+        }
+      },
+      {
+        "championId": 84,
+        "championLevel": 5,
+        "championPoints": "206,401",
+        "ChampionInfo": {
+          "Name": "Akali",
+          "Title": "the Rogue Assassin"
+        }
+      }
+    ]
+  },
+  {
+    "leaguePoints": 1516,
     "LadderRank": 10,
+    "summonerId": "bcLME08i3xoti2S_tTMbWq81oPQ_NNEMKFjOmpFSxQz7tlU",
+    "SummonerInfo": {
+      "profileIconId": 4353,
+      "summonerLevel": 504,
+      "name": "Badlulu fan"
+    },
+    "RankInfo": {
+      "queueType": "RANKED_SOLO_5x5",
+      "tier": "CHALLENGER",
+      "rank": "I"
+    },
+    "MasteryInfos": [
+      {
+        "championId": 76,
+        "championLevel": 7,
+        "championPoints": "675,530",
+        "ChampionInfo": {
+          "Name": "Nidalee",
+          "Title": "the Bestial Huntress"
+        }
+      },
+      {
+        "championId": 64,
+        "championLevel": 7,
+        "championPoints": "586,560",
+        "ChampionInfo": {
+          "Name": "Lee Sin",
+          "Title": "the Blind Monk"
+        }
+      },
+      {
+        "championId": 104,
+        "championLevel": 7,
+        "championPoints": "489,926",
+        "ChampionInfo": {
+          "Name": "Graves",
+          "Title": "the Outlaw"
+        }
+      },
+      {
+        "championId": 121,
+        "championLevel": 7,
+        "championPoints": "338,443",
+        "ChampionInfo": {
+          "Name": "Kha'Zix",
+          "Title": "the Voidreaver"
+        }
+      },
+      {
+        "championId": 60,
+        "championLevel": 7,
+        "championPoints": "305,930",
+        "ChampionInfo": {
+          "Name": "Elise",
+          "Title": "the Spider Queen"
+        }
+      }
+    ]
+  },
+  {
+    "leaguePoints": 1506,
+    "LadderRank": 11,
     "summonerId": "iono8wSe4EQ3Gu133p_owX-fHA1nD1l6ILf_mLR3nVvux0Q",
     "SummonerInfo": {
       "profileIconId": 4021,
@@ -615,68 +677,6 @@
         "ChampionInfo": {
           "Name": "Kalista",
           "Title": "the Spear of Vengeance"
-        }
-      }
-    ]
-  },
-  {
-    "leaguePoints": 1491,
-    "LadderRank": 11,
-    "summonerId": "bcLME08i3xoti2S_tTMbWq81oPQ_NNEMKFjOmpFSxQz7tlU",
-    "SummonerInfo": {
-      "profileIconId": 4353,
-      "summonerLevel": 504,
-      "name": "Badlulu fan"
-    },
-    "RankInfo": {
-      "queueType": "RANKED_SOLO_5x5",
-      "tier": "CHALLENGER",
-      "rank": "I"
-    },
-    "MasteryInfos": [
-      {
-        "championId": 76,
-        "championLevel": 7,
-        "championPoints": "674,470",
-        "ChampionInfo": {
-          "Name": "Nidalee",
-          "Title": "the Bestial Huntress"
-        }
-      },
-      {
-        "championId": 64,
-        "championLevel": 7,
-        "championPoints": "586,560",
-        "ChampionInfo": {
-          "Name": "Lee Sin",
-          "Title": "the Blind Monk"
-        }
-      },
-      {
-        "championId": 104,
-        "championLevel": 7,
-        "championPoints": "489,926",
-        "ChampionInfo": {
-          "Name": "Graves",
-          "Title": "the Outlaw"
-        }
-      },
-      {
-        "championId": 121,
-        "championLevel": 7,
-        "championPoints": "338,443",
-        "ChampionInfo": {
-          "Name": "Kha'Zix",
-          "Title": "the Voidreaver"
-        }
-      },
-      {
-        "championId": 60,
-        "championLevel": 7,
-        "championPoints": "305,930",
-        "ChampionInfo": {
-          "Name": "Elise",
-          "Title": "the Spider Queen"
         }
       }
     ]
@@ -744,7 +744,7 @@
     ]
   },
   {
-    "leaguePoints": 1483,
+    "leaguePoints": 1478,
     "LadderRank": 13,
     "summonerId": "9H6V0KBcUVhsD9Lofer8bVjgPbA9fMG1VP4nSSS-E-w3VK0",
     "SummonerInfo": {

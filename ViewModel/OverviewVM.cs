@@ -66,12 +66,15 @@ namespace _2DAE15_HovhannesHakobyan_Exam.ViewModel
             try
             {
                 TopSummoners = await _summonerRepository.GetTopSummonersAsync();
+
                 Console.WriteLine("Using API");
             }
             catch (Exception)
             {
+                //API threw exception, so we fallback on local repository
                 _summonerRepository = new SummonerLocalRepository();
                 TopSummoners = await _summonerRepository.GetTopSummonersAsync();
+
                 Console.WriteLine("Using Local");
             }
 
